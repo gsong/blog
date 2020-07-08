@@ -13,13 +13,6 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "pages",
         path: `${__dirname}/src/pages`,
       },
@@ -41,9 +34,13 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
-          content: path.resolve("./src/components/layout.js"),
-          default: path.resolve("./src/components/layout.js"),
+          content: path.resolve("./src/components/Article.js"),
+          default: path.resolve("./src/components/Layout.js"),
         },
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-prismjs",
+          "gatsby-remark-smartypants",
+        ],
       },
     },
     "gatsby-transformer-sharp",

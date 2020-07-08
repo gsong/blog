@@ -10,13 +10,13 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"src/**/*.js\"",
     "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "gatsby"
+    "website"
   ],
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -37,10 +37,13 @@
     "gatsby-plugin-offline": "^3.2.16",
     "gatsby-plugin-react-helmet": "^3.3.9",
     "gatsby-plugin-sharp": "^2.6.18",
+    "gatsby-remark-prismjs": "^3.5.9",
+    "gatsby-remark-smartypants": "^2.3.9",
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-sharp": "^2.5.10",
     "graphql": "^15.3.0",
     "prettier": "^2.0.5",
+    "prismjs": "^1.20.0",
     "prop-types": "^15.7.2"
   }
 }

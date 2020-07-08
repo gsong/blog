@@ -2,74 +2,44 @@ import React from "react";
 import { Global } from "@emotion/core";
 import { Link } from "gatsby";
 
-import { colors } from "../styles";
+import SEO from "./SEO";
+import { fontSize, global, space } from "../styles";
 
-const Layout = (props) => {
-  console.log(props);
+import "prismjs/themes/prism-solarizedlight.css";
 
-  const { children } = props;
-
+const Layout = ({
+  children,
+  pageContext: {
+    frontmatter: { title, keywords = [] },
+  },
+}) => {
   return (
     <>
       <Global styles={global} />
+      <SEO {...{ title, keywords }} />
+
       <header
         css={{
           display: "flex",
           alignItems: "baseline",
           justifyContent: "space-between",
-          margin: "20px 0",
+          margin: `${space[4]} 0 ${space[10]}`,
         }}
       >
-        <h1>
-          <Link
-            to="/"
-            css={{
-              color: colors.text,
-              ":hover": { color: colors.link, textDecoration: "none" },
-            }}
-          >
-            George
+        <h1 css={{ margin: "auto" }}>
+          <Link to="/" css={{ ":hover": { textDecoration: "none" } }}>
+            gsong.dev
           </Link>
         </h1>
-        <nav>
-          <Link to="/articles">Articles</Link>
-        </nav>
       </header>
 
       <main>{children}</main>
 
-      <footer css={{ marginTop: 20 }}>
+      <footer css={{ fontSize: fontSize.base, marginTop: space[8] }}>
         George Song &copy; {new Date().getFullYear()}
       </footer>
     </>
   );
-};
-
-const global = {
-  html: {
-    boxSizing: "border-box",
-  },
-
-  "*, *:before, *:after": {
-    boxSizing: "inherit",
-  },
-
-  body: {
-    backgroundColor: colors.background,
-    color: colors.text,
-    fontFamily: `system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif`,
-    maxWidth: 600,
-    margin: "auto",
-  },
-
-  a: {
-    color: colors.link,
-    textDecoration: "none",
-
-    ":hover": { textDecoration: "underline" },
-  },
-
-  h1: { margin: 0 },
 };
 
 export default Layout;
