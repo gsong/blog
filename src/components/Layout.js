@@ -4,40 +4,46 @@ import { Link } from "gatsby";
 
 import { colors } from "../styles";
 
-const Layout = ({ children }) => (
-  <>
-    <Global styles={global} />
-    <header
-      css={{
-        display: "flex",
-        alignItems: "baseline",
-        justifyContent: "space-between",
-        margin: "20px 0",
-      }}
-    >
-      <h1>
-        <Link
-          to="/"
-          css={{
-            color: colors.text,
-            ":hover": { color: colors.link, textDecoration: "none" },
-          }}
-        >
-          George
-        </Link>
-      </h1>
-      <nav>
-        <Link to="/articles">Articles</Link>
-      </nav>
-    </header>
+const Layout = (props) => {
+  console.log(props);
 
-    <main>{children}</main>
+  const { children } = props;
 
-    <footer css={{ marginTop: 20 }}>
-      George Song &copy; {new Date().getFullYear()}
-    </footer>
-  </>
-);
+  return (
+    <>
+      <Global styles={global} />
+      <header
+        css={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+          margin: "20px 0",
+        }}
+      >
+        <h1>
+          <Link
+            to="/"
+            css={{
+              color: colors.text,
+              ":hover": { color: colors.link, textDecoration: "none" },
+            }}
+          >
+            George
+          </Link>
+        </h1>
+        <nav>
+          <Link to="/articles">Articles</Link>
+        </nav>
+      </header>
+
+      <main>{children}</main>
+
+      <footer css={{ marginTop: 20 }}>
+        George Song &copy; {new Date().getFullYear()}
+      </footer>
+    </>
+  );
+};
 
 const global = {
   html: {
