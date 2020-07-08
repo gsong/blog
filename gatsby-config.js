@@ -2,31 +2,32 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "George’s Website",
-    description:
-      "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
-    author: "@chrisbiscardi",
+    title: "George Song’s Website",
+    description: "Musings of a middle-aged developer.",
+    author: "@zukefresh",
   },
+
   plugins: [
+    "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `pages`,
+        name: "pages",
         path: `${__dirname}/src/pages`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `content`,
+        name: "content",
         path: `${__dirname}/content`,
       },
     },
@@ -37,7 +38,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
           content: path.resolve("./src/components/layout.js"),
@@ -48,7 +49,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: "gatsby-default-mdx-basic",
         short_name: "starter",
