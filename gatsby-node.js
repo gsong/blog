@@ -1,7 +1,9 @@
-exports.onCreateNode = ({ node, getNode }) => {
-  if (node.internal.type === "Mdx") {
-    const fileNode = getNode(node.parent);
-    console.log("*********", `"${fileNode.absolutePath}"`);
-    console.log("*********", `"${fileNode.relativeDirectory}"`);
-  }
+const path = require("path");
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    },
+  });
 };

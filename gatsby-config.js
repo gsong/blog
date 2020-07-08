@@ -2,10 +2,10 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter MDX Basic",
+    title: "George’s Website",
     description:
       "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
-    author: "@chrisbiscardi"
+    author: "@chrisbiscardi",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -13,34 +13,37 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
+        path: `${__dirname}/src/pages`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/content`
-      }
+        path: `${__dirname}/content`,
+      },
     },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `${__dirname}/content`
-      }
+        path: `${__dirname}/content`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: { default: path.resolve("./src/components/layout.js") }
-      }
+        defaultLayouts: {
+          content: path.resolve("./src/components/layout.js"),
+          default: path.resolve("./src/components/layout.js"),
+        },
+      },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -53,11 +56,11 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/gatsby-icon.png" // This path is relative to the root of the site.
-      }
-    }
+        icon: "src/images/gatsby-icon.png",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ]
+  ],
 };
