@@ -2,7 +2,7 @@ name: test
 
 on:
   push:
-    branches: [develop]
+    branches-ignore: [main]
   pull_request:
 
 jobs:
@@ -40,3 +40,4 @@ jobs:
       # workflow specific steps
 
       - run: npm run lint
+      - run: npm run build
