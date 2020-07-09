@@ -76,7 +76,10 @@ export const global = {
   h2: {
     fontSize: fontSize.xl2,
     fontWeight: 500,
+    marginTop: space[8],
   },
+
+  p: { lineHeight: 1.25 },
 
   strong: { fontWeight: 600 },
 };

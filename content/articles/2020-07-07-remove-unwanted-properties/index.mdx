@@ -7,7 +7,8 @@ keywords:
 
 ## Problem
 
-You have a JavaScript object that you got from somewhere:
+You have a JavaScript object that you got from somewhere (e.g. retrieved from
+API):
 
 ```js
 const restaurant = {
@@ -17,3 +18,38 @@ const restaurant = {
   secretKeyLocation: "somewhere",
 };
 ```
+
+However, you want to remove `secretKeyLocation` before passing the object onto
+the next part of the workflow.
+
+## Solution: Destructure/Rest Syntax
+
+The combination of [object destructuring][destructure] and [object literal
+spread/rest syntax][spread] to the rescue ⛑.
+
+```js
+const { secretKeyLocation, ...rest } = restaurant;
+
+doSomethingWith(rest);
+```
+
+With this, you now have three variables:
+
+- `secretKeyLocation` with the value of `"somewhere"`
+- `rest`, a new object with the value of:
+
+  ```js
+  {
+    name: "Nong's Khao Man Gai",
+    address: "609 SE Ankeny St",
+    phone: "503-740-2907",
+  }
+  ```
+
+- `restaurant` which is untouched and retains its original value. Immutability
+  FTW 🙌!
+
+[destructure]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring
+[spread]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals
