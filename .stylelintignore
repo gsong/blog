@@ -1,0 +1,6 @@
+*.json
+*.mdx
+*.png
+*.yaml
+LICENSE
+public/
