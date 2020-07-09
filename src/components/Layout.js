@@ -7,16 +7,11 @@ import { fontSize, global, space } from "../styles";
 
 import "prismjs/themes/prism-solarizedlight.css";
 
-const Layout = ({
-  children,
-  pageContext: {
-    frontmatter: { title, keywords = [] },
-  },
-}) => {
+const Layout = ({ children, pageContext: { frontmatter } }) => {
   return (
     <>
       <Global styles={global} />
-      <SEO {...{ title, keywords }} />
+      <SEO {...frontmatter} />
 
       <header
         css={{
