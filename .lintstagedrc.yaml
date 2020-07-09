@@ -1,0 +1,4 @@
+"*.js": eslint --cache --fix
+"*.{css,js}": stylelint --fix
+"*.{md,mdx}": remark -f
+"*": prettier --check
