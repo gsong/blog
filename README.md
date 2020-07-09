@@ -1,28 +1,29 @@
-# Gatsby Starter MDX Basic
+# George's Website
 
-View this starter
-[live on Netlify](https://gatsby-starter-mdx-basic.netlify.com/)
+The site is [built with Gatsby][gatsby], and [deployed at gsong.dev][gsong.dev].
 
-This starter build MDX support into the
-[gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default).
-Its README also applies here.
+## Local Development Setup
 
-1. Create a new Gatsby site using this starter
+1. Install dependencies
 
-```sh
-gatsby new my-site https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic
-```
+   ```sh
+   npx pnpm i
+   ```
 
-2. Install dependencies
+1. Start Gatsby development server
 
-```sh
-yarn
-```
+   ```sh
+   npm start
+   ```
 
-3. Run the develop script
+1. Navigate to <http://localhost:8000>.
 
-```sh
-yarn develop
-```
+1. Start editing.
 
-4. Edit Page 2 in `src/pages/page-2.mdx`
+## File Locations
+
+- Major site pages are in [`src/pages/`](./src/pages).
+- Articles are in [`content/articles/`](./content/articles).
+
+[gatsby]: https://www.gatsbyjs.org
+[gsong.dev]: https://gsong.dev
