@@ -1,3 +1,5 @@
 plugins:
-  - lint-no-dead-urls
+  - - lint-no-dead-urls
+    - skipLocalhost: true
+      skipOffline: true
   - validate-links
