@@ -1,11 +1,11 @@
 ---
 title: Remove Properties From JavaScript Objects
-date: 2020-07-08
+date: 2020-07-09T07:53:23-07:00
 keywords:
   - javascript
 ---
 
-## Problem
+## Use Case
 
 You have a JavaScript object that you got from somewhere (e.g. retrieved from
 API):
@@ -36,7 +36,7 @@ doSomethingWith(rest);
 With this, you now have three variables:
 
 - `secretKeyLocation` with the value of `"somewhere"`
-- `rest`, a new object with the value of:
+- `rest`, a new object with the `secretKeyLocation` property removed:
 
   ```js
   {
@@ -46,7 +46,7 @@ With this, you now have three variables:
   }
   ```
 
-- `restaurant` which is untouched and retains its original value. Immutability
+- `restaurant`, which is untouched and retains its original value. Immutability
   FTW 🙌!
 
 [destructure]:

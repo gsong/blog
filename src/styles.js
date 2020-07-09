@@ -30,6 +30,20 @@ export const space = [
   "4rem",
 ];
 
+const prismStyles = {
+  "code, pre": {
+    "&[class*='language-']": { fontSize: fontSize.base },
+  },
+
+  pre: {
+    "&[class*='language-']": {
+      borderRadius: "0.5rem",
+      boxShadow:
+        "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    },
+  },
+};
+
 export const global = {
   html: {
     boxSizing: "border-box",
@@ -64,10 +78,6 @@ export const global = {
     ":hover": { textDecoration: "underline" },
   },
 
-  "code, pre": {
-    "&[class*='language-']": { fontSize: fontSize.base },
-  },
-
   h1: {
     fontSize: fontSize.xl3,
     margin: 0,
@@ -82,4 +92,6 @@ export const global = {
   p: { lineHeight: 1.25 },
 
   strong: { fontWeight: 600 },
+
+  ...prismStyles,
 };

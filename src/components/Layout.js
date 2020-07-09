@@ -35,7 +35,13 @@ const Layout = ({
 
       <main>{children}</main>
 
-      <footer css={{ fontSize: fontSize.base, marginTop: space[8] }}>
+      <footer
+        css={{
+          fontSize: fontSize.base,
+          marginTop: space[8],
+          marginBottom: space[4],
+        }}
+      >
         George Song &copy; {new Date().getFullYear()}
       </footer>
     </>
