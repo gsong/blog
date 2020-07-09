@@ -5,8 +5,10 @@ import { fontSize, space } from "../styles";
 
 const Article = ({ children, ...props }) => {
   const { date, title } = props.pageContext.frontmatter;
-  const published = new Date(date).toLocaleDateString(undefined, {
-    dateStyle: "long",
+  const published = new Date(date).toLocaleDateString(getLocale(), {
+    month: "long",
+    year: "numeric",
+    day: "numeric",
   });
 
   return (
@@ -21,5 +23,12 @@ const Article = ({ children, ...props }) => {
     </Layout>
   );
 };
+
+const getLocale = () =>
+  typeof window === "undefined"
+    ? "en"
+    : navigator.languages
+    ? navigator.languages[0]
+    : navigator.language;
 
 export default Article;
