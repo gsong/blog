@@ -1,12 +1,14 @@
 export const color = {
   yellow: "hsl(44, 87%, 98%)",
   blue: "hsl(205, 80%, 40%)",
-  gray: "hsl(192, 81%, 14%)",
+  gray: ["hsl(194, 14%, 40%)", "hsl(192, 81%, 14%)"],
   magenta: "hsl(331, 64%, 52%)",
 };
 
 // https://tailwindcss.com/docs/font-size/
 export const fontSize = {
+  xs: "0.75rem",
+  sm: "0.875rem",
   base: "1rem",
   lg: "1.125rem",
   xl: "1.25rem",
@@ -32,7 +34,7 @@ export const space = [
 
 const prismStyles = {
   "code, pre": {
-    '&[class*="language-"]': { fontSize: fontSize.base },
+    '&[class*="language-"]': { fontSize: fontSize.sm },
   },
 
   ".gatsby-highlight": {
@@ -40,7 +42,7 @@ const prismStyles = {
     borderRadius: "0.3em",
     boxShadow:
       "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-    margin: "0.5em 0",
+    margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
 
@@ -63,6 +65,10 @@ const prismStyles = {
     paddingLeft: "0.75em",
     paddingRight: "1em",
   },
+
+  li: {
+    ".gatsby-highlight": { marginBottom: "calc(1.45rem / 2)" },
+  },
 };
 
 export const global = {
@@ -76,9 +82,7 @@ export const global = {
 
   body: {
     backgroundColor: color.yellow,
-    color: color.gray,
-    fontFamily: `system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif`,
-    fontSize: fontSize.xl,
+    color: color.gray[1],
     margin: "auto",
     maxWidth: 600,
     width: "95vw",
@@ -90,25 +94,6 @@ export const global = {
 
     ":hover": { textDecoration: "underline" },
   },
-
-  h1: {
-    fontSize: fontSize.xl3,
-    margin: 0,
-  },
-
-  h2: {
-    fontSize: fontSize.xl2,
-    fontWeight: 500,
-    marginTop: space[8],
-  },
-
-  "ol, ul": { paddingLeft: "1.2em" },
-
-  p: { lineHeight: 1.25 },
-
-  select: { fontSize: fontSize.lg },
-
-  strong: { fontWeight: 600 },
 
   ...prismStyles,
 };

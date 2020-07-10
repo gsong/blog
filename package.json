@@ -44,6 +44,7 @@
     "gatsby-plugin-offline": "^3.2.17",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-plugin-typography": "^2.5.10",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-remark-smartypants": "^2.3.10",
     "gatsby-source-filesystem": "^2.3.19",
@@ -55,12 +56,14 @@
     "prettier": "^2.0.5",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
+    "react-typography": "^0.16.19",
     "remark-cli": "^8.0.0",
     "remark-lint": "^7.0.1",
     "remark-lint-no-dead-urls": "^1.0.2",
     "remark-validate-links": "^10.0.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.6.1",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "typography": "^0.16.19"
   }
 }

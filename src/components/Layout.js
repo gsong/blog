@@ -3,7 +3,7 @@ import { Global } from "@emotion/core";
 import { Link } from "gatsby";
 
 import SEO from "./SEO";
-import { fontSize, global, space } from "../styles";
+import { color, fontSize, global, space } from "../styles";
 
 import "prismjs/themes/prism-solarizedlight.css";
 
@@ -18,7 +18,7 @@ const Layout = ({ children, pageContext: { frontmatter } }) => {
           display: "flex",
           alignItems: "baseline",
           justifyContent: "space-between",
-          margin: `${space[4]} 0 ${space[10]}`,
+          margin: `${space[4]} 0 ${space[8]}`,
         }}
       >
         <h1 css={{ margin: "auto" }}>
@@ -32,7 +32,8 @@ const Layout = ({ children, pageContext: { frontmatter } }) => {
 
       <footer
         css={{
-          fontSize: fontSize.base,
+          color: color.gray[0],
+          fontSize: fontSize.sm,
           marginTop: space[8],
           marginBottom: space[4],
         }}

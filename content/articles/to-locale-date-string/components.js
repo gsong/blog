@@ -23,7 +23,7 @@ export const LocaleDate = () => {
   );
 
   return (
-    <>
+    <p>
       <label>
         <select
           onChange={(e) =>
@@ -42,7 +42,7 @@ export const LocaleDate = () => {
         <span css={{ marginLeft: space[2] }}>locale</span>
       </label>{" "}
       displays {display}
-    </>
+    </p>
   );
 };
 

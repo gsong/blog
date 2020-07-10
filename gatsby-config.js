@@ -10,6 +10,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -17,6 +20,7 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -24,12 +28,14 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
         path: `${__dirname}/content`,
       },
     },
+
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -43,8 +49,15 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: "./src/styles/typography",
+        omitGoogleFont: true,
+      },
+    },
+
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -54,7 +67,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/gs-icon.png",
+        icon: "./src/images/gs-icon.png",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
