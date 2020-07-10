@@ -28,7 +28,7 @@ part of the workflow.
 The combination of [object destructuring][destructure] and [object literal
 spread/rest syntax][spread] to the rescue ⛑.
 
-```js
+```js{1}
 const { secretKeyLocation, ...rest } = restaurant;
 
 doSomethingWith(rest);
