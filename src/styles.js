@@ -32,15 +32,36 @@ export const space = [
 
 const prismStyles = {
   "code, pre": {
-    "&[class*='language-']": { fontSize: fontSize.base },
+    '&[class*="language-"]': { fontSize: fontSize.base },
   },
 
-  pre: {
-    "&[class*='language-']": {
-      borderRadius: "0.5rem",
-      boxShadow:
-        "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  ".gatsby-highlight": {
+    backgroundColor: "hsl(44, 87%, 94%)",
+    borderRadius: "0.3em",
+    boxShadow:
+      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    margin: "0.5em 0",
+    overflow: "auto",
+    padding: "1em",
+
+    'pre[class*="language-"]': {
+      backgroundColor: "transparent",
+      float: "left",
+      margin: 0,
+      minWidth: "100%",
+      overflow: "initial",
+      padding: 0,
     },
+  },
+
+  ".gatsby-highlight-code-line": {
+    backgroundColor: "hsl(44, 100%, 87%)",
+    borderLeft: "0.25em solid hsl(0, 100%, 80%)",
+    display: "block",
+    marginLeft: "-1em",
+    marginRight: "-1em",
+    paddingLeft: "0.75em",
+    paddingRight: "1em",
   },
 };
 
@@ -80,6 +101,8 @@ export const global = {
     fontWeight: 500,
     marginTop: space[8],
   },
+
+  "ol, ul": { paddingLeft: "1.2em" },
 
   p: { lineHeight: 1.25 },
 
