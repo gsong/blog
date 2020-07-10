@@ -63,14 +63,6 @@ export const global = {
     width: "95vw",
   },
 
-  article: {
-    h1: {
-      color: color.magenta,
-      fontSize: fontSize.xl4,
-      fontWeight: 500,
-    },
-  },
-
   a: {
     color: color.blue,
     textDecoration: "none",
@@ -90,6 +82,8 @@ export const global = {
   },
 
   p: { lineHeight: 1.25 },
+
+  select: { fontSize: fontSize.lg },
 
   strong: { fontWeight: 600 },
 
