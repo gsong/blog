@@ -5,17 +5,7 @@ export const color = {
   magenta: "hsl(331, 64%, 52%)",
 };
 
-// https://tailwindcss.com/docs/font-size/
-export const fontSize = {
-  xs: "0.75rem",
-  sm: "0.875rem",
-  base: "1rem",
-  lg: "1.125rem",
-  xl: "1.25rem",
-  xl2: "1.5rem",
-  xl3: "1.875rem",
-  xl4: "2.25rem",
-};
+export const fontSize = { sm: "0.875rem" };
 
 // https://tailwindcss.com/docs/margin
 export const space = [
@@ -28,8 +18,6 @@ export const space = [
   "1.5rem",
   "2rem",
   "2.5rem",
-  "3rem",
-  "4rem",
 ];
 
 const prismStyles = {
