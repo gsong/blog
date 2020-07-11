@@ -8,5 +8,6 @@ export const toDateStringWithLocale = (date, locale) =>
     day: "numeric",
   });
 
-const getLocale = () =>
-  typeof window === "undefined" ? "en" : navigator.language;
+const getLocale = () => (isBrowser ? navigator.language : "en");
+
+export const isBrowser = typeof window !== "undefined";

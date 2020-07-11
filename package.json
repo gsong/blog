@@ -9,7 +9,7 @@
     "url": "https://github.com/gsong/personal-site"
   },
   "scripts": {
-    "build": "rimraf public && gatsby build",
+    "build": "rimraf .cache && rimraf public && gatsby build",
     "deploy": "npm run build && gh-pages -d public",
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"src/**/*.js\"",
