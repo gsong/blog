@@ -6,6 +6,7 @@ keywords:
   - javascript
 ---
 
+import CodeSandbox from "components/CodeSandbox";
 import { ISODate, LocaleDate } from "./components";
 
 Do you automatically reach for [Moment.js][] when you need to format dates? Or
@@ -60,6 +61,16 @@ you for the smaller bundle size.
 OK, they probably won't—but you'll have the satisfaction of knowing you've done
 your part to improve their experience.
 
+## Try It Out for Yourself
+
+[Play with the live code at CodeSandbox][sandbox].
+
+<CodeSandbox
+  sandbox="tolocaledatestring-mn3ug"
+  title="demo of toLocaleDateString"
+  style={{ height: "min(30vh, 200px)" }}
+/>
+
 [date-constructor]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#Timestamp_string
 [date-fns]: https://date-fns.org
@@ -70,5 +81,6 @@ your part to improve their experience.
 [moment.js]: https://momentjs.com
 [navigator.language]:
   https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language
+[sandbox]: https://codesandbox.io/s/tolocaledatestring-mn3ug
 [tolocaledatestring]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString

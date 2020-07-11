@@ -34,7 +34,7 @@ const Layout = ({ children, pageContext: { frontmatter } }) => {
         css={{
           color: color.gray[0],
           fontSize: fontSize.sm,
-          marginTop: space[8],
+          marginTop: space[2],
           marginBottom: space[4],
         }}
       >

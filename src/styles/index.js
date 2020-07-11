@@ -1,3 +1,8 @@
+export const borderRadius = "0.3em";
+
+export const boxShadow =
+  "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
+
 export const color = {
   yellow: "hsl(44, 87%, 98%)",
   blue: "hsl(205, 80%, 40%)",
@@ -27,9 +32,8 @@ const prismStyles = {
 
   ".gatsby-highlight": {
     backgroundColor: "hsl(44, 87%, 94%)",
-    borderRadius: "0.3em",
-    boxShadow:
-      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    borderRadius,
+    boxShadow,
     margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
