@@ -24,7 +24,7 @@ const Header = () => (
   >
     <h1
       css={{
-        fontSize: `clamp(${fontSize.base}, 6.85vw, ${fontSize.xl3})`,
+        fontSize: `clamp(${fontSize.base}, 6.8vw, ${fontSize.xl3})`,
         fontWeight: 700,
         margin: `0 0 0 ${space[6]}`,
         order: 1,
