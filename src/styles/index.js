@@ -1,3 +1,4 @@
+// **DO NOT** change the order of the css imports
 import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
@@ -7,10 +8,11 @@ export const boxShadow =
   "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
 
 export const color = {
-  yellow: ["hsl(44, 87%, 98%)", "hsl(44, 87%, 94%)", "hsl(44, 100%, 87%)"],
   blue: "hsl(205, 80%, 40%)",
   gray: ["hsl(194, 14%, 40%)", "hsl(192, 81%, 14%)"],
   magenta: "hsl(331, 64%, 52%)",
+  red: "hsl(0, 71%, 52%)",
+  yellow: ["hsl(44, 87%, 98%)", "hsl(44, 87%, 94%)", "hsl(44, 100%, 87%)"],
 };
 
 export const fontSize = {
@@ -57,14 +59,16 @@ const prismStyles = {
     overflow: "auto",
     padding: "1em",
 
-    // breakout of parent
-    position: "relative",
-    left: "50%",
-    right: "50%",
-    marginLeft: codeBlockMargin(),
-    marginRight: codeBlockMargin(),
-    width: "100vw",
-    maxWidth: codeBlockWidth,
+    "@supports (display: grid)": {
+      // breakout of parent
+      position: "relative",
+      left: "50%",
+      right: "50%",
+      marginLeft: codeBlockMargin(),
+      marginRight: codeBlockMargin(),
+      width: "100vw",
+      maxWidth: codeBlockWidth,
+    },
 
     'pre[class*="language-"]': {
       backgroundColor: "transparent",
@@ -91,7 +95,10 @@ const prismStyles = {
   li: {
     ".gatsby-highlight": {
       marginBottom: "calc(1.45rem / 2)",
-      marginLeft: codeBlockMargin("-0.725rem"),
+
+      "@supports (display: grid)": {
+        marginLeft: codeBlockMargin("-0.725rem"),
+      },
     },
   },
 };

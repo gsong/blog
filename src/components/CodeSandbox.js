@@ -3,15 +3,19 @@ import React from "react";
 import { color } from "../styles";
 import { isBrowser, isIE11 } from "../utils";
 
-const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) =>
-  isIE11 ? null : (
+const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) => {
+  const url = `https://codesandbox.io/s/${sandbox}`;
+
+  return isIE11 ? (
+    <p css={{ color: color.red }}>
+      ☹️ Your browser doesn’t support CodeSandbox. Use a modern browser to visit{" "}
+      <a href={url}>{url}</a>.
+    </p>
+  ) : (
     <>
       <As>Try It Out for Yourself</As>
       <p>
-        <a href={`https://codesandbox.io/s/${sandbox}`}>
-          Play with the live code at CodeSandbox
-        </a>
-        .
+        <a href={url}>Play with the live code at CodeSandbox</a>.
       </p>
       <iframe
         src={`https://codesandbox.io/embed/${sandbox}?${queryParams}`}
@@ -24,6 +28,7 @@ const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) =>
       ></iframe>
     </>
   );
+};
 
 const options = () => {
   const base = {
