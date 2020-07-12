@@ -14,6 +14,11 @@ module.exports = {
     "gatsby-plugin-sharp",
 
     {
+      resolve: "gatsby-plugin-exclude",
+      options: { paths: ["**/helpers/**"] },
+    },
+
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
@@ -49,6 +54,17 @@ module.exports = {
         ],
       },
     },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
+
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
 
     {
       resolve: `gatsby-plugin-typography`,

@@ -3,7 +3,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
-  const data = useStaticQuery(detailsQuery);
+  const data = useStaticQuery(query);
   const metaDescription = description || data.site.siteMetadata.description;
 
   return (
@@ -60,8 +60,8 @@ const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
   );
 };
 
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
+const query = graphql`
+  query SEOQuery {
     site {
       siteMetadata {
         title
