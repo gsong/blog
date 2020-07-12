@@ -10,7 +10,12 @@ export const color = {
   magenta: "hsl(331, 64%, 52%)",
 };
 
-export const fontSize = { sm: "0.875rem", base: "1rem", xl3: "1.875rem" };
+export const fontSize = {
+  sm: "0.875rem",
+  base: "1rem",
+  lg: "1.125rem",
+  xl3: "1.875rem",
+};
 
 // https://tailwindcss.com/docs/margin
 export const space = [

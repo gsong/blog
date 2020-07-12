@@ -45,7 +45,9 @@ const Header = () => (
         to="/"
         css={{
           alignItems: "center",
+          color: color.gray[1],
           display: "flex",
+          fontSize: fontSize.lg,
 
           ":hover": { textDecoration: "none" },
         }}
