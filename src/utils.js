@@ -11,3 +11,7 @@ export const toDateStringWithLocale = (date, locale) =>
 const getLocale = () => (isBrowser ? navigator.language : "en");
 
 export const isBrowser = typeof window !== "undefined";
+
+export const isIE11 = isBrowser
+  ? !!window.MSInputMethodContext && !!document.documentMode
+  : false;

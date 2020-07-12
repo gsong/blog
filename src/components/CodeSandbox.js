@@ -1,27 +1,28 @@
 import React from "react";
 
-import { isBrowser } from "../utils";
+import { isBrowser, isIE11 } from "../utils";
 
-const CodeSandbox = ({ sandbox, title, ...props }) => (
-  <>
-    <h2>Try It Out for Yourself</h2>
-    <p>
-      <a href={`https://codesandbox.io/s/${sandbox}`}>
-        Play with the live code at CodeSandbox
-      </a>
-      .
-    </p>
-    <iframe
-      src={`https://codesandbox.io/embed/${sandbox}?${queryParams}`}
-      title={`CodeSandbox: ${title}`}
-      css={style}
-      loading="lazy"
-      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-      {...props}
-    ></iframe>
-  </>
-);
+const CodeSandbox = ({ sandbox, title, ...props }) =>
+  isIE11 ? null : (
+    <>
+      <h2>Try It Out for Yourself</h2>
+      <p>
+        <a href={`https://codesandbox.io/s/${sandbox}`}>
+          Play with the live code at CodeSandbox
+        </a>
+        .
+      </p>
+      <iframe
+        src={`https://codesandbox.io/embed/${sandbox}?${queryParams}`}
+        title={`CodeSandbox: ${title}`}
+        css={style}
+        loading="lazy"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        {...props}
+      ></iframe>
+    </>
+  );
 
 const options = () => {
   const base = {
