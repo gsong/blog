@@ -26,13 +26,15 @@ const Header = () => (
       css={{
         fontSize: `clamp(${fontSize.base}, 6.8vw, ${fontSize.xl3})`,
         fontWeight: 700,
-        margin: `0 0 0 ${space[6]}`,
+        hyphens: "auto",
+        margin: `0 0 0 ${space[3]}`,
+        maxWidth: 400,
         order: 1,
 
         // stylelint-disable-next-line media-feature-name-case
-        "@media (maxWidth: 375px)": {
-          hyphens: "auto",
-          marginLeft: space[3],
+        "@media (min-width: 440px)": {
+          hyphens: "none",
+          marginLeft: space[6],
         },
       }}
     >
