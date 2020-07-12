@@ -10,8 +10,6 @@ import SEO from "./SEO";
 import Twitter from "./icons/Twitter";
 import { color, fontSize, global, space } from "../styles";
 
-import "prismjs/themes/prism-solarizedlight.css";
-
 const Layout = ({
   children,
   header = <Header />,

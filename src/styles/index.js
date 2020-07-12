@@ -1,16 +1,20 @@
+import "prismjs/themes/prism-solarizedlight.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+
 export const borderRadius = "0.3em";
 
 export const boxShadow =
   "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
 
 export const color = {
-  yellow: "hsl(44, 87%, 98%)",
+  yellow: ["hsl(44, 87%, 98%)", "hsl(44, 87%, 94%)", "hsl(44, 100%, 87%)"],
   blue: "hsl(205, 80%, 40%)",
   gray: ["hsl(194, 14%, 40%)", "hsl(192, 81%, 14%)"],
   magenta: "hsl(331, 64%, 52%)",
 };
 
 export const fontSize = {
+  xs: "0.75rem",
   sm: "0.875rem",
   base: "1rem",
   lg: "1.125rem",
@@ -31,18 +35,36 @@ export const space = [
   "2.5rem",
 ];
 
+const bodyWidth = "600px";
+const contentWidth = "95vw";
+const codeBlockWidth = "860px";
+const codeBlockMargin = (compensate = "0px") =>
+  `calc((min(100vw, ${codeBlockWidth}) / 2 * -1) + ${compensate})`;
+
 const prismStyles = {
   "code, pre": {
-    '&[class*="language-"]': { fontSize: fontSize.sm },
+    '&[class*="language-"]': {
+      fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Andale Mono", "Ubuntu Mono", "Courier New", monospace;`,
+      fontSize: `clamp(${fontSize.xs}, 2vw, ${fontSize.sm})`,
+    },
   },
 
   ".gatsby-highlight": {
-    backgroundColor: "hsl(44, 87%, 94%)",
+    backgroundColor: color.yellow[1],
     borderRadius,
     boxShadow,
     margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
+
+    // breakout of parent
+    position: "relative",
+    left: "50%",
+    right: "50%",
+    marginLeft: codeBlockMargin(),
+    marginRight: codeBlockMargin(),
+    width: "100vw",
+    maxWidth: codeBlockWidth,
 
     'pre[class*="language-"]': {
       backgroundColor: "transparent",
@@ -51,11 +73,13 @@ const prismStyles = {
       minWidth: "100%",
       overflow: "initial",
       padding: 0,
+
+      "&.line-numbers": { paddingLeft: "2.8em" },
     },
   },
 
   ".gatsby-highlight-code-line": {
-    backgroundColor: "hsl(44, 100%, 87%)",
+    backgroundColor: color.yellow[2],
     borderLeft: "0.25em solid hsl(0, 100%, 80%)",
     display: "block",
     marginLeft: "-1em",
@@ -65,7 +89,10 @@ const prismStyles = {
   },
 
   li: {
-    ".gatsby-highlight": { marginBottom: "calc(1.45rem / 2)" },
+    ".gatsby-highlight": {
+      marginBottom: "calc(1.45rem / 2)",
+      marginLeft: codeBlockMargin("-0.725rem"),
+    },
   },
 };
 
@@ -79,11 +106,11 @@ export const global = {
   },
 
   body: {
-    backgroundColor: color.yellow,
+    backgroundColor: color.yellow[0],
     color: color.gray[1],
     margin: "auto",
-    maxWidth: 600,
-    width: "95vw",
+    maxWidth: bodyWidth,
+    width: contentWidth,
   },
 
   a: {
@@ -92,6 +119,8 @@ export const global = {
 
     ":hover": { textDecoration: "underline" },
   },
+
+  h3: { fontWeight: "normal" },
 
   ...prismStyles,
 };

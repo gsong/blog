@@ -1,11 +1,12 @@
 import React from "react";
 
+import { color } from "../styles";
 import { isBrowser, isIE11 } from "../utils";
 
-const CodeSandbox = ({ sandbox, title, ...props }) =>
+const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) =>
   isIE11 ? null : (
     <>
-      <h2>Try It Out for Yourself</h2>
+      <As>Try It Out for Yourself</As>
       <p>
         <a href={`https://codesandbox.io/s/${sandbox}`}>
           Play with the live code at CodeSandbox
@@ -49,15 +50,16 @@ const queryParams = Object.entries(options())
 
 const style = {
   border: 0,
+  boxShadow: `0 0 0 4px ${color.yellow[1]}`,
   height: "clamp(150px, 30vh, 500px)",
   overflow: "hidden",
 
   // breakout of parent
+  position: "relative",
   left: "50%",
+  right: "50%",
   marginLeft: "-50vw",
   marginRight: "-50vw",
-  position: "relative",
-  right: "50%",
   width: "100vw",
 };
 

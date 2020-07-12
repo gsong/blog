@@ -49,7 +49,10 @@ module.exports = {
           default: path.resolve("./src/components/Layout.js"),
         },
         gatsbyRemarkPlugins: [
-          "gatsby-remark-prismjs",
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: { showLineNumbers: true },
+          },
           "gatsby-remark-smartypants",
         ],
       },
