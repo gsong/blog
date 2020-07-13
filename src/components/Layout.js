@@ -84,10 +84,8 @@ const Header = () => (
           display: "flex",
           fontSize: fontSize.lg,
 
-          ":hover": {
-            color: color.blue,
-            textDecoration: "none",
-          },
+          // stylelint-disable-next-line
+          ":focus,:hover": { color: color.blue[1], textDecoration: "none" },
         }}
       >
         <HeadShot
@@ -104,7 +102,15 @@ const Header = () => (
 );
 
 const SocialLink = ({ children, ...props }) => (
-  <a {...props} css={{ color: color.gray[0], ":hover": { color: color.blue } }}>
+  <a
+    {...props}
+    css={{
+      color: color.gray[0],
+
+      // stylelint-disable-next-line
+      ":focus,:hover": { color: color.blue[1] },
+    }}
+  >
     <div
       css={{
         display: "flex",

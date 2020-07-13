@@ -4,11 +4,13 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 export const borderRadius = "0.3em";
 
-export const boxShadow =
-  "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
+export const boxShadow = {
+  base: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+};
 
 export const color = {
-  blue: "hsl(205, 80%, 40%)",
+  blue: ["hsl(205, 50%, 50%)", "hsl(205, 80%, 40%)"],
   gray: ["hsl(194, 14%, 40%)", "hsl(192, 81%, 14%)"],
   magenta: "hsl(331, 64%, 52%)",
   red: "hsl(0, 71%, 52%)",
@@ -54,7 +56,7 @@ const prismStyles = {
   ".gatsby-highlight": {
     backgroundColor: color.yellow[1],
     borderRadius,
-    boxShadow,
+    boxShadow: boxShadow.base,
     margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
@@ -121,10 +123,22 @@ export const global = {
   },
 
   a: {
-    color: color.blue,
+    color: color.blue[1],
     textDecoration: "none",
 
-    ":hover": { textDecoration: "underline" },
+    ":focus,:hover": { textDecoration: "underline" },
+  },
+
+  button: {
+    backgroundColor: color.blue[0],
+    border: 0,
+    borderRadius,
+    boxShadow: boxShadow.md,
+    color: "white",
+    padding: `${space[2]} ${space[4]}`,
+
+    ":active": { boxShadow: boxShadow.base },
+    ":focus,:hover": { backgroundColor: color.blue[1], cursor: "pointer" },
   },
 
   h3: { fontWeight: "normal" },
