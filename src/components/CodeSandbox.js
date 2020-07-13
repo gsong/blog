@@ -21,7 +21,7 @@ const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) => {
             <a href={url}>Play with the live code at CodeSandbox</a>.
           </p>
           <iframe
-            src={`https://codesandbox.io/embed/${sandbox}?${queryParams}`}
+            src={`https://codesandbox.io/embed/${sandbox}?${queryParams()}`}
             title={`CodeSandbox: ${title}`}
             css={style}
             loading="lazy"
@@ -58,9 +58,10 @@ const options = () => {
   return { ...base, view };
 };
 
-const queryParams = Object.entries(options())
-  .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-  .join("&");
+const queryParams = () =>
+  Object.entries(options())
+    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    .join("&");
 
 const style = {
   border: 0,
