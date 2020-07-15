@@ -8,10 +8,10 @@ module.exports = {
   },
 
   plugins: [
-    "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-theme-ui",
+    "gatsby-transformer-sharp",
 
     {
       resolve: "gatsby-plugin-exclude",
@@ -65,9 +65,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
 
     {
       resolve: `gatsby-plugin-typography`,

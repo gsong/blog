@@ -1,8 +1,8 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
 import Layout from "./Layout";
 import { toLocaleDateString } from "../utils";
-import { color, fontSize } from "../styles";
 
 const Article = ({ children, ...props }) => {
   const { date, title } = props.pageContext.frontmatter;
@@ -11,8 +11,8 @@ const Article = ({ children, ...props }) => {
   return (
     <Layout {...props}>
       <article>
-        <h1 css={{ color: color.magenta }}>{title}</h1>
-        <p css={{ color: color.gray[0], fontSize: fontSize.sm }}>{published}</p>
+        <h1 sx={{ color: "magenta" }}>{title}</h1>
+        <p sx={{ color: "gray.0", fontSize: "sm" }}>{published}</p>
         {children}
       </article>
     </Layout>

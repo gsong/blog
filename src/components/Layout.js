@@ -1,6 +1,8 @@
+/** @jsx jsx */
 import React from "react";
 import { Global } from "@emotion/core";
 import { Link } from "gatsby";
+import { jsx } from "theme-ui";
 
 import GitHub from "./icons/GitHub";
 import HeadShot from "./HeadShot";
@@ -8,7 +10,7 @@ import Instagram from "./icons/Instagram";
 import LinkedIn from "./icons/LinkedIn";
 import SEO from "./SEO";
 import Twitter from "./icons/Twitter";
-import { color, fontSize, global, space } from "../styles";
+import { global } from "../styles";
 
 const Layout = ({
   children,
@@ -16,7 +18,7 @@ const Layout = ({
   pageContext: { frontmatter },
 }) => {
   return (
-    <>
+    <React.Fragment>
       <Global styles={global} />
       <SEO {...frontmatter} />
 
@@ -25,19 +27,19 @@ const Layout = ({
       <main>{children}</main>
 
       <footer
-        css={{
+        sx={{
           alignItems: "center",
-          color: color.gray[0],
+          color: "gray.0",
           display: "flex",
           flexWrap: "wrap",
-          fontSize: fontSize.sm,
+          fontSize: "sm",
           justifyContent: "space-between",
-          marginBottom: space[4],
-          marginTop: space[2],
+          marginBottom: 4,
+          marginTop: 2,
         }}
       >
         <div>George Song &copy; {new Date().getFullYear()}</div>
-        <div css={{ display: "flex", fontSize: fontSize.xl }}>
+        <div sx={{ display: "flex", fontSize: "xl" }}>
           <SocialLink
             href="https://twitter.com/zukefresh"
             aria-label="Visit my Twitter"
@@ -67,35 +69,35 @@ const Layout = ({
           </SocialLink>
         </div>
       </footer>
-    </>
+    </React.Fragment>
   );
 };
 
 const imageSize = 50;
 
 const Header = () => (
-  <header css={{ margin: `${space[4]} 0 ${space[7]}` }}>
+  <header sx={{ mt: 4, mb: 7, mx: 0 }}>
     <h1>
       <Link
         to="/"
-        css={{
+        sx={{
           alignItems: "center",
-          color: color.gray[1],
+          color: "gray.1",
           display: "flex",
-          fontSize: fontSize.lg,
+          fontSize: "lg",
 
           // stylelint-disable-next-line
-          ":focus,:hover": { color: color.blue[1], textDecoration: "none" },
+          ":focus,:hover": { color: "blue.1", textDecoration: "none" },
         }}
       >
         <HeadShot
-          css={{
+          sx={{
             borderRadius: "50%",
             maxWidth: imageSize,
             maxHeight: imageSize,
           }}
         />
-        <div css={{ marginLeft: space[3] }}>George Song</div>
+        <div sx={{ ml: 3 }}>George Song</div>
       </Link>
     </h1>
   </header>
@@ -104,15 +106,15 @@ const Header = () => (
 const SocialLink = ({ children, ...props }) => (
   <a
     {...props}
-    css={{
-      color: color.gray[0],
+    sx={{
+      color: "gray.0",
 
       // stylelint-disable-next-line
-      ":focus,:hover": { color: color.blue[1] },
+      ":focus,:hover": { color: "blue.1" },
     }}
   >
     <div
-      css={{
+      sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

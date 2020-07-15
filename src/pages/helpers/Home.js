@@ -1,8 +1,8 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, useThemeUI } from "theme-ui";
 
 import HeadShot from "../../components/HeadShot";
 import Layout from "../../components/Layout";
-import { borderRadius, fontSize, space } from "../../styles";
 
 const Home = ({ children, ...props }) => {
   return (
@@ -14,43 +14,41 @@ const Home = ({ children, ...props }) => {
 
 const imageSize = 115;
 
-const Header = () => (
-  <header
-    css={{
-      alignItems: "center",
-      display: "flex",
-      margin: `${space[4]} 0 ${space[7]}`,
-    }}
-  >
-    <h1
-      css={{
-        fontSize: `clamp(${fontSize.base}, 6.8vw, ${fontSize.xl3})`,
-        fontWeight: 700,
-        hyphens: "auto",
-        margin: `0 0 0 ${space[3]}`,
-        maxWidth: 400,
-        order: 1,
+const Header = () => {
+  const { theme } = useThemeUI();
 
-        // stylelint-disable-next-line media-feature-name-case
-        "@media (min-width: 440px)": {
-          hyphens: "none",
-          marginLeft: space[6],
-        },
-      }}
-    >
-      👋 I’m George. I help development teams be more effective.
-    </h1>
+  return (
+    <header sx={{ alignItems: "center", display: "flex", mt: 4, mb: 7, mx: 0 }}>
+      <h1
+        sx={{
+          fontSize: `clamp(${theme.fontSizes.base}, 6.8vw, ${theme.fontSizes.xl3})`,
+          fontWeight: 700,
+          hyphens: "auto",
+          margin: `0 0 0 ${theme.space[3]}`,
+          maxWidth: 400,
+          order: 1,
 
-    <HeadShot
-      css={{
-        borderRadius: `${borderRadius} 30px`,
-        maxHeight: imageSize,
-        maxWidth: imageSize,
-        minHeight: imageSize,
-        minWidth: imageSize,
-      }}
-    />
-  </header>
-);
+          // stylelint-disable-next-line media-feature-name-case
+          "@media (min-width: 440px)": {
+            hyphens: "none",
+            marginLeft: 6,
+          },
+        }}
+      >
+        👋 I’m George. I help development teams be more effective.
+      </h1>
+
+      <HeadShot
+        sx={{
+          borderRadius: `${theme.radii[1]} 30px`,
+          maxHeight: imageSize,
+          maxWidth: imageSize,
+          minHeight: imageSize,
+          minWidth: imageSize,
+        }}
+      />
+    </header>
+  );
+};
 
 export default Home;

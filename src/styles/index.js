@@ -2,61 +2,24 @@
 import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-export const borderRadius = "0.3em";
-
-export const boxShadow = {
-  base: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-  md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-};
-
-export const color = {
-  blue: ["hsl(205, 50%, 50%)", "hsl(205, 80%, 40%)"],
-  gray: ["hsl(194, 14%, 40%)", "hsl(192, 81%, 14%)"],
-  magenta: "hsl(331, 64%, 52%)",
-  red: "hsl(0, 71%, 52%)",
-  yellow: ["hsl(44, 87%, 98%)", "hsl(44, 87%, 94%)", "hsl(44, 100%, 87%)"],
-};
-
-export const fontSize = {
-  xs: "0.75rem",
-  sm: "0.875rem",
-  base: "1rem",
-  lg: "1.125rem",
-  xl: "1.25rem",
-  xl3: "1.875rem",
-};
-
-// https://tailwindcss.com/docs/margin
-export const space = [
-  0,
-  "0.25rem",
-  "0.5rem",
-  "0.75rem",
-  "1rem",
-  "1.25rem",
-  "1.5rem",
-  "2rem",
-  "2.5rem",
-];
-
 const bodyWidth = "600px";
 const contentWidth = "95vw";
 const codeBlockWidth = "860px";
 const codeBlockMargin = (compensate = "0px") =>
   `calc((min(100vw, ${codeBlockWidth}) / 2 * -1) + ${compensate})`;
 
-const prismStyles = {
+const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
   "code, pre": {
     '&[class*="language-"]': {
       fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Andale Mono", "Ubuntu Mono", "Courier New", monospace;`,
-      fontSize: `clamp(${fontSize.xs}, 2vw, ${fontSize.sm})`,
+      fontSize: `clamp(${fontSizes.xs}, 2vw, ${fontSizes.sm})`,
     },
   },
 
   ".gatsby-highlight": {
-    backgroundColor: color.yellow[1],
-    borderRadius,
-    boxShadow: boxShadow.base,
+    backgroundColor: colors.yellow[1],
+    borderRadius: radii[1],
+    boxShadow: shadows.base,
     margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
@@ -85,7 +48,7 @@ const prismStyles = {
   },
 
   ".gatsby-highlight-code-line": {
-    backgroundColor: color.yellow[2],
+    backgroundColor: colors.yellow[2],
     borderLeft: "0.25em solid hsl(0, 100%, 80%)",
     display: "block",
     marginLeft: "-1em",
@@ -103,45 +66,49 @@ const prismStyles = {
       },
     },
   },
-};
+});
 
-export const global = {
-  html: {
-    boxSizing: "border-box",
-  },
+export const global = (theme) => {
+  const { colors, radii, shadows, space } = theme;
 
-  "*, *:before, *:after": {
-    boxSizing: "inherit",
-  },
+  return {
+    html: {
+      boxSizing: "border-box",
+    },
 
-  body: {
-    backgroundColor: color.yellow[0],
-    color: color.gray[1],
-    margin: "auto",
-    maxWidth: bodyWidth,
-    width: contentWidth,
-  },
+    "*, *:before, *:after": {
+      boxSizing: "inherit",
+    },
 
-  a: {
-    color: color.blue[1],
-    textDecoration: "none",
+    body: {
+      backgroundColor: colors.yellow[0],
+      color: colors.gray[1],
+      margin: "auto",
+      maxWidth: bodyWidth,
+      width: contentWidth,
+    },
 
-    ":focus,:hover": { textDecoration: "underline" },
-  },
+    a: {
+      color: colors.blue[1],
+      textDecoration: "none",
 
-  button: {
-    backgroundColor: color.blue[0],
-    border: 0,
-    borderRadius,
-    boxShadow: boxShadow.md,
-    color: "white",
-    padding: `${space[2]} ${space[4]}`,
+      ":focus,:hover": { textDecoration: "underline" },
+    },
 
-    ":active": { boxShadow: boxShadow.base },
-    ":focus,:hover": { backgroundColor: color.blue[1], cursor: "pointer" },
-  },
+    button: {
+      backgroundColor: colors.blue[0],
+      border: 0,
+      borderRadius: radii[1],
+      boxShadow: shadows.md,
+      color: "white",
+      padding: `${space[2]} ${space[4]}`,
 
-  h3: { fontWeight: "normal" },
+      ":active": { boxShadow: shadows.base },
+      ":focus,:hover": { backgroundColor: colors.blue[1], cursor: "pointer" },
+    },
 
-  ...prismStyles,
+    h3: { fontWeight: "normal" },
+
+    ...prismStyles(theme),
+  };
 };

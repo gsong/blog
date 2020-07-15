@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import React from "react";
+import { jsx } from "theme-ui";
 
-import { space } from "styles";
 import { toDateStringWithLocale } from "utils";
 
 const locales = {
@@ -39,7 +40,7 @@ export const LocaleDate = () => {
             </option>
           ))}
         </select>
-        <span css={{ marginLeft: space[2] }}>locale</span>
+        <span sx={{ marginLeft: 2 }}>locale</span>
       </label>{" "}
       displays {display}
     </p>
