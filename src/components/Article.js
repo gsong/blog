@@ -11,8 +11,8 @@ const Article = ({ children, ...props }) => {
   return (
     <Layout {...props}>
       <article>
-        <h1 sx={{ color: "magenta" }}>{title}</h1>
-        <p sx={{ color: "gray.0", fontSize: "sm" }}>{published}</p>
+        <h1 sx={{ color: "font.articleH1" }}>{title}</h1>
+        <p sx={{ color: "font.body.0", fontSize: "sm" }}>{published}</p>
         {children}
       </article>
     </Layout>

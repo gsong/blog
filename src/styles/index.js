@@ -17,9 +17,9 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
   },
 
   ".gatsby-highlight": {
-    backgroundColor: colors.yellow[1],
+    backgroundColor: colors.background[1],
     borderRadius: radii[1],
-    boxShadow: shadows.base,
+    boxShadow: shadows.sm,
     margin: "0.5em 0 1.45rem",
     overflow: "auto",
     padding: "1em",
@@ -48,7 +48,7 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
   },
 
   ".gatsby-highlight-code-line": {
-    backgroundColor: colors.yellow[2],
+    backgroundColor: colors.background[2],
     borderLeft: "0.25em solid hsl(0, 100%, 80%)",
     display: "block",
     marginLeft: "-1em",
@@ -81,22 +81,22 @@ export const global = (theme) => {
     },
 
     body: {
-      backgroundColor: colors.yellow[0],
-      color: colors.gray[1],
+      backgroundColor: colors.background[0],
+      color: colors.font.body[1],
       margin: "auto",
       maxWidth: bodyWidth,
       width: contentWidth,
     },
 
     a: {
-      color: colors.blue[1],
+      color: colors.link,
       textDecoration: "none",
 
       ":focus,:hover": { textDecoration: "underline" },
     },
 
     button: {
-      backgroundColor: colors.blue[0],
+      backgroundColor: colors.button[0],
       border: 0,
       borderRadius: radii[1],
       boxShadow: shadows.md,
@@ -104,7 +104,7 @@ export const global = (theme) => {
       padding: `${space[2]} ${space[4]}`,
 
       ":active": { boxShadow: shadows.base },
-      ":focus,:hover": { backgroundColor: colors.blue[1], cursor: "pointer" },
+      ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
     },
 
     h3: { fontWeight: "normal" },

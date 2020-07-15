@@ -77,8 +77,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "gatsby-default-mdx-basic",
-        short_name: "starter",
+        name: "George Song's Site",
+        short_name: "gsong.dev",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",

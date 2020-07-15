@@ -29,7 +29,7 @@ const Layout = ({
       <footer
         sx={{
           alignItems: "center",
-          color: "gray.0",
+          color: "font.body.0",
           display: "flex",
           flexWrap: "wrap",
           fontSize: "sm",
@@ -82,12 +82,12 @@ const Header = () => (
         to="/"
         sx={{
           alignItems: "center",
-          color: "gray.1",
+          color: "font.body.1",
           display: "flex",
           fontSize: "lg",
 
           // stylelint-disable-next-line
-          ":focus,:hover": { color: "blue.1", textDecoration: "none" },
+          ":focus,:hover": { color: "link", textDecoration: "none" },
         }}
       >
         <HeadShot
@@ -107,10 +107,10 @@ const SocialLink = ({ children, ...props }) => (
   <a
     {...props}
     sx={{
-      color: "gray.0",
+      color: "font.body.0",
 
       // stylelint-disable-next-line
-      ":focus,:hover": { color: "blue.1" },
+      ":focus,:hover": { color: "link" },
     }}
   >
     <div

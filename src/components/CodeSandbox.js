@@ -9,7 +9,7 @@ const CodeSandbox = ({ as: As = "h2", sandbox, title, ...props }) => {
   const url = `https://codesandbox.io/s/${sandbox}`;
 
   return isIE11 ? (
-    <p sx={{ color: "red" }}>
+    <p sx={{ color: "warning" }}>
       ☹️ Your browser doesn’t support CodeSandbox. Use a modern browser to visit{" "}
       <a href={url}>{url}</a>.
     </p>
@@ -67,7 +67,7 @@ const queryParams = () =>
 const style = {
   border: 0,
   outline: "4px solid",
-  outlineColor: "yellow.1",
+  outlineColor: "background.1",
   height: "clamp(150px, 60vh, 800px)",
   overflow: "hidden",
 
