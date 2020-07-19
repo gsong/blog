@@ -15,3 +15,7 @@ plugins:
   - react
 rules:
   react/prop-types: off
+overrides:
+  - files: "*.mdx"
+    rules:
+      react/no-unescaped-entities: off
