@@ -1,7 +1,7 @@
 ---
 title: React.useReducer Reducer Patterns, Part 1
 description: There's more than one way to write reducers.
-date: 2020-07-18T17:39:50-07:00
+date: 2020-07-19T06:22:41-07:00
 keywords:
   - javascript
   - react
@@ -27,12 +27,11 @@ reducer to produce the new state.
 When you want to update the state:
 
 1. Dispatch an action
-1. The current state and the action are passed to the reducer function
+1. The hook passes the current state and the action to the reducer function
 1. The reducer computes a new state
 1. The state is updated with the new state
 
-`useReducer` takes care of steps 2 and 4, so you're responsible for steps 1
-and 3.
+`useReducer` takes care of steps 2 and 4. You're responsible for steps 1 and 3.
 
 ## Reducer Function
 
@@ -44,8 +43,9 @@ These are all valid signatures for reducer functions:
 () => newState
 ```
 
-As you can see, the primary job of a reducer is to produce a new state,
-optionally taking into account the current state and the dispatched action.
+As you can see, <mark>the primary job of a reducer is to produce a new
+state</mark>, optionally taking into account the current state and the
+dispatched action.
 
 ## Putting It All Together With useReducer
 
@@ -55,11 +55,20 @@ optionally taking into account the current state and the dispatched action.
 const [state, dispatch] = useReducer(reducer, initialState);
 ```
 
-Your interactions with the hook are to read the `state`, and `dispatch` actions
-to update the state. Let's focus on different `reducer` (a.k.a. "new state"
-calculator) implementation patterns.
+You pass in a `reducer` function (and optionally an `initialState`) to
+instantiate a `useReducer` hook. What you get back is a **read-only** `state`
+and a `dispatch` function which you'll use to trigger the `reducer`.
+
+This is one key difference compared to `useState`. The `useReducer` hook
+computes the next state internally using a `reducer` function. The `useState`
+hook relies entirely on external calculations for its next state.
+
+Let's focus on different `reducer` (a.k.a. "new state" calculator)
+implementation patterns.
 
 ## Reducer Without Any Params
+
+`() => newState`
 
 The primary job of a reducer is to return a new state. In its simplest form, a
 reducer doesn't even need to accept any parameters.
@@ -78,17 +87,16 @@ return (
 );
 ```
 
-As you can see, the names `state`, `dispatch`, and `reducer` are all conceptual.
-In practice, you can name them anything you like. In this example, they are
-`date` (state), `update` (dispatch), and `reducer`.
+As you can see, the names `state`, `dispatch`, and `reducer` are conceptual. In
+practice, you can name them anything you like. In this example, they are `date`
+(state), `update` (dispatch), and `reducer`.
 
 Also notice that when we invoke `update()`, we're doing it _without_ passing in
-any parameters. `dispatch` signals the hook to activate the reducer to compute
-the new state, it's up to you whether you need to send an action with the signal
-or not. In this case, the hook is actually invoking the reducer with
-`(currentState, undefined)`.
+any parameters. `dispatch` signals the hook to run the reducer to compute the
+new state, it's up to you whether you need to send an action with the signal or
+not. In this case, the hook actually runs `reducer(currentState, undefined)`.
 
-### 🤔 Wait, but the Reducer Doesn't Accept Any Params
+### 🤔 But Wait, the Reducer Doesn't Accept Any Params
 
 That's right. In JavaScript, just because you pass parameters to a function,
 doesn't mean it needs to accept them.
@@ -115,6 +123,11 @@ const result = sayHi(1, 2, 3);
 
 ## Reducer Using Current State
 
+`(currentState) => newState`
+
+This form of reducer is useful when you need the current state to calculate the
+next state.
+
 ```js{1-2,7}
 const reducer = (count) => count + 1;
 const [count, addOne] = React.useReducer(reducer, 0);
@@ -127,10 +140,14 @@ return (
 );
 ```
 
+Once again, the dispatch function, `addOne()`, doesn't need to pass an action to
+`reducer`—the `reducer` is capable of computing the next state entirely based on
+the current state.
+
 <CodeSandbox
   as="h3"
   sandbox="reducer-pattern-01-gmuic"
-  title="simple reducer"
+  title="current state reducer"
   style={{ maxHeight: 375 }}
 />
 
