@@ -1,7 +1,7 @@
 ---
 title: React.useReducer Reducer Patterns, Part 1
 description: There's more than one way to write reducers.
-date: 2020-07-19T06:22:41-07:00
+date: 2020-07-19T12:06:41-07:00
 keywords:
   - javascript
   - react
@@ -10,7 +10,7 @@ keywords:
 import CodeSandbox from "components/CodeSandbox";
 import Repl from "components/Repl";
 
-I see a lot of people, epsecially those new to React hooks, shy away from
+I see a lot of people, especially those new to React hooks, shy away from
 [`useReducer`][usereducer] in favor of multiple `useState`s. I think some of it
 is the simplicity of the `useState` API, and some of it is assumed complexity
 via association with [Redux][]. In practice, `useReducer` has a lot more in
@@ -19,6 +19,8 @@ common with `useState` than Redux.
 The `useState` API has two parts: the state and the state setter. When you want
 to update the state, you replace it using the state setter.
 
+![React.useState set state flow](./setState-flow.svg)
+
 The `useReducer` API has three parts: the state, an action dispatcher, and a
 reducer to produce the new state.
 
@@ -26,14 +28,14 @@ reducer to produce the new state.
 
 When you want to update the state:
 
-1. Dispatch an action
-1. The hook passes the current state and the action to the reducer function
-1. The reducer computes a new state
-1. The state is updated with the new state
+1. Dispatch an action.
+1. The hook passes the current state and the action to the reducer function.
+1. The reducer computes a new state.
+1. The state is updated with the new state.
 
 `useReducer` takes care of steps 2 and 4. You're responsible for steps 1 and 3.
 
-## Reducer Function
+# The Reducer Function
 
 These are all valid signatures for reducer functions:
 
@@ -59,12 +61,12 @@ You pass in a `reducer` function (and optionally an `initialState`) to
 instantiate a `useReducer` hook. What you get back is a **read-only** `state`
 and a `dispatch` function which you'll use to trigger the `reducer`.
 
-This is one key difference compared to `useState`. The `useReducer` hook
-computes the next state internally using a `reducer` function. The `useState`
-hook relies entirely on external calculations for its next state.
+This is one of the key differences when compared to `useState`—a `useReducer`
+hook computes the next state internally using a `reducer` function, while a
+`useState` hook relies entirely on external calculations for its next state.
 
-Let's focus on different `reducer` (a.k.a. "new state" calculator)
-implementation patterns.
+For the rest of the article, we'll focus on different `reducer` (a.k.a. "new
+state" calculator) implementation patterns.
 
 ## Reducer Without Any Params
 
@@ -87,14 +89,14 @@ return (
 );
 ```
 
-As you can see, the names `state`, `dispatch`, and `reducer` are conceptual. In
-practice, you can name them anything you like. In this example, they are `date`
-(state), `update` (dispatch), and `reducer`.
+The names `state`, `dispatch`, and `reducer` are conceptual. In practice, you
+can name them anything you like. In this example, they are `date` (state),
+`update` (dispatch), and `reducer`.
 
-Also notice that when we invoke `update()`, we're doing it _without_ passing in
-any parameters. `dispatch` signals the hook to run the reducer to compute the
-new state, it's up to you whether you need to send an action with the signal or
-not. In this case, the hook actually runs `reducer(currentState, undefined)`.
+Notice that we invoke `update()` _without_ passing in any parameters. The
+dispatch function signals the hook to run the reducer function, it's up to you
+whether you need to send an action with the signal or not. In this case, the
+hook actually runs `reducer(currentState, undefined)`.
 
 ### 🤔 But Wait, the Reducer Doesn't Accept Any Params
 
@@ -108,7 +110,7 @@ const result = sayHi(1, 2, 3);
 ```
 
 <Repl
-  repl="FunctionalScientificDeletion"
+  repl="reducer-pattern-00"
   title="function params"
   style={{ maxHeight: 300 }}
 />
@@ -150,6 +152,11 @@ the current state.
   title="current state reducer"
   style={{ maxHeight: 375 }}
 />
+
+## Intermission
+
+😅 Whew, let's take a break for now. Coming in part 2: we'll explore reducers
+that use actions, as well as actions in combination with the current state.
 
 [redux]: https://redux.js.org
 [usereducer]: https://reactjs.org/docs/hooks-reference.html#usereducer
