@@ -1,7 +1,9 @@
 *.jpg
 *.json
 *.mdx
+*.mmd
 *.png
+*.svg
 *.yaml
 LICENSE
 public/
