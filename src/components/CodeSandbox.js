@@ -22,7 +22,7 @@ const CodeSandbox = ({
     </p>
   ) : (
     <>
-      <As>{header}</As>
+      {header && <As>{header}</As>}
       {shouldLoad ? (
         <>
           <p>
