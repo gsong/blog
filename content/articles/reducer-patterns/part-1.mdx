@@ -75,7 +75,7 @@ state" calculator) implementation patterns.
 The primary job of a reducer is to return a new state. In its simplest form, a
 reducer doesn't even need to accept any parameters.
 
-```js{1-2,9}
+```js{1,2,7,9}
 const reducer = () => new Date();
 const [date, update] = React.useReducer(reducer, new Date());
 
@@ -131,7 +131,7 @@ const result = sayHi(1, 2, 3);
 This form of reducer is useful when you need the current state to calculate the
 next state.
 
-```js{1-2,7}
+```js{1,2,6,7}
 const reducer = (count) => count + 1;
 const [count, addOne] = React.useReducer(reducer, 0);
 
