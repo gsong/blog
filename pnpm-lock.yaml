@@ -1,34 +1,34 @@
 dependencies:
   '@emotion/core': 10.0.28_react@16.13.1
-  gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+  gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
   gatsby-image: 2.4.13
-  gatsby-plugin-theme-ui: 0.3.0_gatsby@2.24.4+theme-ui@0.3.1
+  gatsby-plugin-theme-ui: 0.3.0_gatsby@2.24.7+theme-ui@0.3.1
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
   react-helmet: 6.1.0_react@16.13.1
   theme-ui: 0.3.1_react@16.13.1
 devDependencies:
   '@commitlint/config-conventional': 9.1.1
-  '@mdx-js/mdx': 1.6.11
-  '@mdx-js/react': 1.6.11_react@16.13.1
+  '@mdx-js/mdx': 1.6.13
+  '@mdx-js/react': 1.6.13_react@16.13.1
   '@svgr/cli': 5.4.0
   babel-eslint: 10.1.0_eslint@7.5.0
   commitlint: 9.1.0
   eslint: 7.5.0
   eslint-plugin-mdx: 1.7.1_eslint@7.5.0+react@16.13.1
   eslint-plugin-react: 7.20.3_eslint@7.5.0
-  gatsby-plugin-exclude: 1.0.2_gatsby@2.24.4
-  gatsby-plugin-manifest: 2.4.18_gatsby@2.24.4
-  gatsby-plugin-mdx: 1.2.27_f1d1534c9b862d08b6b2f1ae31503b65
-  gatsby-plugin-offline: 3.2.18_gatsby@2.24.4
-  gatsby-plugin-react-helmet: 3.3.10_gatsby@2.24.4+react-helmet@6.1.0
-  gatsby-plugin-sharp: 2.6.19_gatsby@2.24.4
-  gatsby-plugin-typography: 2.5.10_04490de3e5135c1c856945d8c0ead4c4
-  gatsby-remark-copy-linked-files: 2.3.11_gatsby@2.24.4
-  gatsby-remark-prismjs: 3.5.10_gatsby@2.24.4+prismjs@1.20.0
-  gatsby-remark-smartypants: 2.3.10_gatsby@2.24.4
-  gatsby-source-filesystem: 2.3.20_gatsby@2.24.4
-  gatsby-transformer-sharp: 2.5.11_49a5bcf41810380c5379bc4230761484
+  gatsby-plugin-exclude: 1.0.2_gatsby@2.24.7
+  gatsby-plugin-manifest: 2.4.19_gatsby@2.24.7
+  gatsby-plugin-mdx: 1.2.27_09ab68ad728f6877ca187e4a9e46c5f8
+  gatsby-plugin-offline: 3.2.19_gatsby@2.24.7
+  gatsby-plugin-react-helmet: 3.3.10_gatsby@2.24.7+react-helmet@6.1.0
+  gatsby-plugin-sharp: 2.6.20_gatsby@2.24.7
+  gatsby-plugin-typography: 2.5.10_3f93a339fd107cabcaeb882a5ed45014
+  gatsby-remark-copy-linked-files: 2.3.11_gatsby@2.24.7
+  gatsby-remark-prismjs: 3.5.10_gatsby@2.24.7+prismjs@1.20.0
+  gatsby-remark-smartypants: 2.3.10_gatsby@2.24.7
+  gatsby-source-filesystem: 2.3.20_gatsby@2.24.7
+  gatsby-transformer-sharp: 2.5.11_d0d1139c294a76c6e035075853aa5aea
   gh-pages: 3.1.0
   graphql: 15.3.0
   husky: 4.2.5
@@ -39,7 +39,7 @@ devDependencies:
   react-typography: 0.16.19_react@16.13.1
   remark-cli: 8.0.1
   remark-lint: 7.0.1
-  remark-lint-no-dead-urls: 1.0.2
+  remark-lint-no-dead-urls: 1.1.0
   remark-validate-links: 10.0.2
   stylelint: 13.6.1
   stylelint-config-standard: 20.0.0_stylelint@13.6.1
@@ -1679,21 +1679,21 @@ packages:
     dev: true
     resolution:
       integrity: sha512-VcSlQhkil4ReYmg1KkN+WqHyYfZ2XfZxDsKAHSfST1GEz/RQHxKZbX+KhFKtKflnL0F4e6DlNQj3vznMNXCR2w==
-  /@mdx-js/mdx/1.6.11:
+  /@mdx-js/mdx/1.6.13:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/plugin-syntax-jsx': 7.10.4_@babel+core@7.10.5
       '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.10.5
-      '@mdx-js/util': 1.6.11
-      babel-plugin-apply-mdx-type-prop: 1.6.11_@babel+core@7.10.5
-      babel-plugin-extract-import-names: 1.6.11
+      '@mdx-js/util': 1.6.13
+      babel-plugin-apply-mdx-type-prop: 1.6.13_@babel+core@7.10.5
+      babel-plugin-extract-import-names: 1.6.13
       camelcase-css: 2.0.1
       detab: 2.0.3
       hast-util-raw: 6.0.0
       lodash.uniq: 4.5.0
       mdast-util-to-hast: 9.1.0
       remark-footnotes: 1.0.0
-      remark-mdx: 1.6.11
+      remark-mdx: 1.6.13
       remark-parse: 8.0.2
       remark-squeeze-paragraphs: 4.0.0
       style-to-object: 0.3.0
@@ -1701,18 +1701,18 @@ packages:
       unist-builder: 2.0.3
       unist-util-visit: 2.0.3
     resolution:
-      integrity: sha512-3Suqe+FVZvK62t+Lc7xjk3T7wSmh7QqzlVNkAx4jM8Q9GeuhcSWkwjS7VHY6KVoOw/jkBSlmzklyM7zACPSoIA==
-  /@mdx-js/react/1.6.11_react@16.13.1:
+      integrity: sha512-xVZnzSQ/QsP6LnYnV5CC9sc92dzm0VsnFEbpDhB3ahbrCc0j/p4O5+q+OIic9H3AAYLIzoKah3Mj+wTnDpAeWg==
+  /@mdx-js/react/1.6.13_react@16.13.1:
     dependencies:
       react: 16.13.1
     peerDependencies:
       react: ^16.13.1
     resolution:
-      integrity: sha512-59qKdVmpxhGcQ7dJKQucKQHxXoS5A1U8x5IYJCitdGVwM6mXkCj1GYyb873oH4cRlxL8BhVHmGalkXTtLqV9Ag==
-  /@mdx-js/runtime/1.6.11_react@16.13.1:
+      integrity: sha512-k8UfufP+eZbxHsprAvGvQB/vmiXpbhMYnM0c6xov5xEg3dYdtzrpjnf2kYsTIwyr3RG2SeZXGjE9tG9vzli53Q==
+  /@mdx-js/runtime/1.6.13_react@16.13.1:
     dependencies:
-      '@mdx-js/mdx': 1.6.11
-      '@mdx-js/react': 1.6.11_react@16.13.1
+      '@mdx-js/mdx': 1.6.13
+      '@mdx-js/react': 1.6.13_react@16.13.1
       buble-jsx-only: 0.19.8
       react: 16.13.1
     engines:
@@ -1720,10 +1720,10 @@ packages:
     peerDependencies:
       react: ^16.13.1
     resolution:
-      integrity: sha512-1L3VI0PxnjAIS8BhBv7hx85rtpLWflu8HMg1opCkquEfnZVC6YYTEwMwskZ5iwruToP2iB0uUmJXdDFmuSIsbA==
-  /@mdx-js/util/1.6.11:
+      integrity: sha512-SmepgIAD4OaTUzbngxiljc7NzSzFvKw5SBdn9JCWZ1BFJaDjrl/j3IevIWVip24fSlm75wCEUm40LNvn/m7Kfw==
+  /@mdx-js/util/1.6.13:
     resolution:
-      integrity: sha512-VbGXtjLOa7RK0w27o9eekGea190sXoJZgltFZzywmLNcBJn3sOynfyNUXH1rx2pyCOOfPcTBYg/Zf9Isfp3BNg==
+      integrity: sha512-IZP3UDGDaaaw0AchbXDofC//f+08w8FzW8EfTL/ZJNy6nKROe5xFwxnfRo5nL06l0CRCwNDmoReAerLuFMl1jA==
   /@mikaelkristiansson/domready/1.0.10:
     resolution:
       integrity: sha512-6cDuZeKSCSJ1KvfEQ25Y8OXUjqDJZ+HgUs6dhASWbAX8fxVraTfPsSeRe2bN+4QJDsgUaXaMWBYfRomCr04GGg==
@@ -2108,7 +2108,7 @@ packages:
     dependencies:
       '@emotion/core': 10.0.28_react@16.13.1
       '@emotion/styled': 10.0.27_c989b1aa057905c7a8b69bf973f55a19
-      '@mdx-js/react': 1.6.11_react@16.13.1
+      '@mdx-js/react': 1.6.13_react@16.13.1
       '@theme-ui/core': 0.3.1_react@16.13.1
       '@theme-ui/css': 0.3.1
       react: 16.13.1
@@ -2162,7 +2162,7 @@ packages:
   /@types/glob/7.1.3:
     dependencies:
       '@types/minimatch': 3.0.3
-      '@types/node': 14.0.23
+      '@types/node': 14.0.24
     resolution:
       integrity: sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==
   /@types/hast/2.3.1:
@@ -2175,7 +2175,7 @@ packages:
       integrity: sha512-GRTZLeLJ8ia00ZH8mxMO8t0aC9M1N9bN461Z2eaRurJo6Fpa+utgCwLzI4jQHcrdzuzp5WPN9jRwpsCQ1VhJ5w==
   /@types/http-proxy/1.17.4:
     dependencies:
-      '@types/node': 14.0.23
+      '@types/node': 14.0.24
     resolution:
       integrity: sha512-IrSHl2u6AWXduUaDLqYpt45tLVCtYv7o4Z0s1KghBCDgIIS9oW5K1H8mZG/A2CfeLdEa7rTd1ACOiHBc1EMT2Q==
   /@types/istanbul-lib-coverage/2.0.3:
@@ -2218,9 +2218,9 @@ packages:
       '@types/node': 8.10.61
     resolution:
       integrity: sha512-U5icWpv7YnZYGsN4/cmh3WD2onMY0aJIiTE6+51TwJCttdHvtCYmkBNOobHlXwrJRL0nkH9jH4kD+1FAdMN4Tg==
-  /@types/node/14.0.23:
+  /@types/node/14.0.24:
     resolution:
-      integrity: sha512-Z4U8yDAl5TFkmYsZdFPdjeMa57NOvnaf1tljHzhouaPEp7LCj2JKkejpI1ODviIAQuW4CcQmxkQ77rnLsOOoKw==
+      integrity: sha512-btt/oNOiDWcSuI721MdL8VQGnjsKjlTMdrKyTcLCKeQp/n4AAMFJ961wMbp+09y8WuGPClDEv07RIItdXKIXAA==
   /@types/node/8.10.61:
     resolution:
       integrity: sha512-l+zSbvT8TPRaCxL1l9cwHCb0tSqGAGcjPJFItGGYat5oCTiq1uQQKYg5m7AF1mgnEBzFXGLJ2LRmNjtreRX76Q==
@@ -2273,7 +2273,7 @@ packages:
       integrity: sha512-GpTIuDpb9u4zIO165fUy9+fXcULdD8HFRNli04GehoMVbeNq7D6OBnqSmg3lxZnC+UvgUhEWKxdKiwYUkGltIw==
   /@types/vfile/3.0.2:
     dependencies:
-      '@types/node': 14.0.23
+      '@types/node': 14.0.24
       '@types/unist': 2.0.3
       '@types/vfile-message': 2.0.0
     dev: true
@@ -2904,7 +2904,7 @@ packages:
   /autoprefixer/9.8.5:
     dependencies:
       browserslist: 4.13.0
-      caniuse-lite: 1.0.30001102
+      caniuse-lite: 1.0.30001104
       colorette: 1.2.1
       normalize-range: 0.1.2
       num2fraction: 1.2.2
@@ -3008,15 +3008,15 @@ packages:
       chokidar: 2.1.8
     resolution:
       integrity: sha512-hC37mm7aAdEb1n8SgggG8a1QuhZapsY/XLCi4ETSH6AVjXBCWEa50CXlOsAMPPWLnSx5Ns6mzz39uvuseh0Xjg==
-  /babel-plugin-apply-mdx-type-prop/1.6.11_@babel+core@7.10.5:
+  /babel-plugin-apply-mdx-type-prop/1.6.13_@babel+core@7.10.5:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/helper-plugin-utils': 7.10.4
-      '@mdx-js/util': 1.6.11
+      '@mdx-js/util': 1.6.13
     peerDependencies:
       '@babel/core': ^7.10.5
     resolution:
-      integrity: sha512-GCdljT0ofgEfEx3Ol3mQIS4f9A/P7m5XG6fLpbU7GIRdncNvQ8x1yhuGWnWJrlZj4/tjz+Hv96BBaGo1bfmiUA==
+      integrity: sha512-G+vyur4OM+2iZih+vUeMzL/Aa0/4s/YZlDo6L0pfslgoX6eNGYT/NmjDZe99VxiaTaODX/bF/kt6oxZJYt8mJw==
   /babel-plugin-dynamic-import-node/2.3.3:
     dependencies:
       object.assign: 4.1.0
@@ -3036,11 +3036,11 @@ packages:
       source-map: 0.5.7
     resolution:
       integrity: sha512-bxZbTTGz0AJQDHm8k6Rf3RQJ8tX2scsfsRyKVgAbiUPUNIRtlK+7JxP+TAd1kRLABFxe0CFm2VdK4ePkoA9FxQ==
-  /babel-plugin-extract-import-names/1.6.11:
+  /babel-plugin-extract-import-names/1.6.13:
     dependencies:
       '@babel/helper-plugin-utils': 7.10.4
     resolution:
-      integrity: sha512-vJRNOsWoxE9ufDm5XZR0KoKknA6loyiw0LNdLX1q4P+tLyzqi01HSLXyuBJqYpXYciVPCNHI7WBUnEhyQY+NTg==
+      integrity: sha512-EKqKcGLmbegJji7qB7VRYQ6pJp74MGCjfCu1H6VOYr+ODqVMIsnxixYSvkuYTvwYaO1dWjSho85T4ctGMWpr+A==
   /babel-plugin-macros/2.8.0:
     dependencies:
       '@babel/runtime': 7.10.5
@@ -3048,15 +3048,15 @@ packages:
       resolve: 1.17.0
     resolution:
       integrity: sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
-  /babel-plugin-remove-graphql-queries/2.9.14_gatsby@2.24.4:
+  /babel-plugin-remove-graphql-queries/2.9.15_gatsby@2.24.7:
     dependencies:
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
     engines:
       node: '>=10.13.0'
     peerDependencies:
       gatsby: ^2.0.0
     resolution:
-      integrity: sha512-V4o7CvS5bud+Tk9ni4gSr2l980K2H0lQ0A7skfSMvHrPlek+Rcs+4tNVpHnKuAWoXTZ+63tW06B4ENn+wf35bg==
+      integrity: sha512-cGNEEOO32kKcI+ZZBcCIliPOvyd7/Dp8zyJ/ZD1lXKuH1frzdbWG2nbxm+iil8OIxWaeHfxf083IHvb868TY9A==
   /babel-plugin-syntax-jsx/6.18.0:
     resolution:
       integrity: sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
@@ -3418,8 +3418,8 @@ packages:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
   /browserslist/4.13.0:
     dependencies:
-      caniuse-lite: 1.0.30001102
-      electron-to-chromium: 1.3.500
+      caniuse-lite: 1.0.30001104
+      electron-to-chromium: 1.3.502
       escalade: 3.0.2
       node-releases: 1.1.59
     engines:
@@ -3677,14 +3677,14 @@ packages:
   /caniuse-api/3.0.0:
     dependencies:
       browserslist: 4.13.0
-      caniuse-lite: 1.0.30001102
+      caniuse-lite: 1.0.30001104
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     resolution:
       integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==
-  /caniuse-lite/1.0.30001102:
+  /caniuse-lite/1.0.30001104:
     resolution:
-      integrity: sha512-fOjqRmHjRXv1H1YD6QVLb96iKqnu17TjcLSaX64TwhGYed0P1E1CCWZ9OujbbK4Z/7zax7zAzvQidzdtjx8RcA==
+      integrity: sha512-pkpCg7dmI/a7WcqM2yfdOiT4Xx5tzyoHAXWsX5/HxZ3TemwDZs0QXdqbE0UPLPVy/7BeK7693YfzfRYfu1YVpg==
   /caseless/0.12.0:
     dev: true
     resolution:
@@ -4557,7 +4557,7 @@ packages:
   /css-loader/1.0.1_webpack@4.43.0:
     dependencies:
       babel-code-frame: 6.26.0
-      css-selector-tokenizer: 0.7.2
+      css-selector-tokenizer: 0.7.3
       icss-utils: 2.1.0
       loader-utils: 1.4.0
       lodash: 4.17.19
@@ -4594,13 +4594,12 @@ packages:
       nth-check: 1.0.2
     resolution:
       integrity: sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==
-  /css-selector-tokenizer/0.7.2:
+  /css-selector-tokenizer/0.7.3:
     dependencies:
       cssesc: 3.0.0
       fastparse: 1.1.2
-      regexpu-core: 4.7.0
     resolution:
-      integrity: sha512-yj856NGuAymN6r8bn8/Jl46pR+OC3eEvAhfGYDUe7YPtTPAYrSSw4oAniZ9Y8T5B92hjhwTBLUen0/vKPxf6pw==
+      integrity: sha512-jWQv3oCEL5kMErj4wRnK/OPoBi0D+P1FR2cDCKYPaMeD2eW3/mttav8HT4hT1CKopiJI/psEULjkClhvJo4Lvg==
   /css-tree/1.0.0-alpha.37:
     dependencies:
       mdn-data: 2.0.4
@@ -5285,9 +5284,9 @@ packages:
   /ee-first/1.1.1:
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
-  /electron-to-chromium/1.3.500:
+  /electron-to-chromium/1.3.502:
     resolution:
-      integrity: sha512-Zz8BZh4Ssb/rZBaicqpi+GOQ0uu3y+24+MxBLCk0UYt8EGoZRP4cYzYHHwXGZfrSbCU4VDjbWN+Tg+TPgOUX6Q==
+      integrity: sha512-TIeXOaHAvfP7FemGUtAJxStmOc1YFGWFNqdey/4Nk41L9b1nMmDVDGNMIWhZJvOfJxix6Cv5FGEnBK+yvw3UTg==
   /elliptic/6.5.3:
     dependencies:
       bn.js: 4.11.9
@@ -5499,7 +5498,7 @@ packages:
     dependencies:
       eslint: 7.5.0
       espree: 7.2.0
-      remark-mdx: 1.6.11
+      remark-mdx: 1.6.13
       remark-parse: 8.0.3
       tslib: 2.0.0
       unified: 9.0.0
@@ -5587,7 +5586,7 @@ packages:
       eslint: 7.5.0
       eslint-mdx: 1.7.1_eslint@7.5.0
       eslint-plugin-react: 7.20.3_eslint@7.5.0
-      remark-mdx: 1.6.11
+      remark-mdx: 1.6.13
       remark-parse: 8.0.3
       remark-stringify: 8.1.1
       tslib: 2.0.0
@@ -6590,7 +6589,7 @@ packages:
   /functional-red-black-tree/1.0.1:
     resolution:
       integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
-  /gatsby-cli/2.12.62:
+  /gatsby-cli/2.12.63:
     dependencies:
       '@babel/code-frame': 7.10.4
       '@hapi/joi': 15.1.1
@@ -6606,14 +6605,14 @@ packages:
       fs-exists-cached: 1.0.0
       fs-extra: 8.1.0
       gatsby-core-utils: 1.3.12
-      gatsby-recipes: 0.1.52_react@16.13.1
-      gatsby-telemetry: 1.3.19
+      gatsby-recipes: 0.1.53_react@16.13.1
+      gatsby-telemetry: 1.3.20
       hosted-git-info: 3.0.5
       ink: 2.7.1_react@16.13.1
       ink-spinner: 3.1.0_ink@2.7.1+react@16.13.1
       is-valid-path: 0.1.1
       lodash: 4.17.19
-      meant: 1.0.1
+      meant: 1.0.2
       node-fetch: 2.6.0
       opentracing: 0.14.4
       pretty-error: 2.1.1
@@ -6636,7 +6635,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-Hi80WtSfG/zn7xYNRQLTUXJiRB+z+BwYnXdEfxWMLiObK3pXMIQQ431a1XH0Crvksdjkmm0gfY5GRZX4MdYvOQ==
+      integrity: sha512-vBIgP/5c+3wfw36YUr2wld1PYRktZWxAX8wDjMjrkj8i1xqkZDc24cxGX+yNAXx5UJ6lCNuRRXSaRiqFErqa2A==
   /gatsby-core-utils/1.3.12:
     dependencies:
       ci-info: 2.0.0
@@ -6701,19 +6700,19 @@ packages:
       node: '>=10.13.0'
     resolution:
       integrity: sha512-Ery8ePfJiFwY5LcOhePIPmie7B/V2Yf5QREmo8sULx3mr00gWrqNwmIgaNYVIAxH87Fdy50CUScxeqQc4Hsl0g==
-  /gatsby-plugin-exclude/1.0.2_gatsby@2.24.4:
+  /gatsby-plugin-exclude/1.0.2_gatsby@2.24.7:
     dependencies:
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       multimatch: 4.0.0
     dev: true
     peerDependencies:
       gatsby: '>2.0.0-alpha'
     resolution:
       integrity: sha512-qqnrAImVDuX1OygjDc8rFW/vUHifd/jTTKo05zKsCdtgwbfF3qGv6FiB7H5j5CyneboboDkt/mvN98G6ra7cDA==
-  /gatsby-plugin-manifest/2.4.18_gatsby@2.24.4:
+  /gatsby-plugin-manifest/2.4.19_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       gatsby-core-utils: 1.3.12
       semver: 5.7.1
       sharp: 0.25.4
@@ -6723,8 +6722,8 @@ packages:
     peerDependencies:
       gatsby: ^2.4.0
     resolution:
-      integrity: sha512-8nsCHLTCAqTg49pft3JaIqAsKlUMC1QA4/gm/Dxxm+kXj/LgfD/ZXjzh9EaBwtnlrWvuuz+Pr/WDEk1d2BMmdQ==
-  /gatsby-plugin-mdx/1.2.27_f1d1534c9b862d08b6b2f1ae31503b65:
+      integrity: sha512-lVLP1m4aBQNC4lhsE3N7VZ6olk5Zb5A2T4jBEus0zxF8RCnfGoCD7Wg0cCMKbKR1n5ZXwHQgZfZI3BSp1/H7sw==
+  /gatsby-plugin-mdx/1.2.27_09ab68ad728f6877ca187e4a9e46c5f8:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/generator': 7.10.5
@@ -6733,8 +6732,8 @@ packages:
       '@babel/preset-env': 7.10.4_@babel+core@7.10.5
       '@babel/preset-react': 7.10.4_@babel+core@7.10.5
       '@babel/types': 7.10.5
-      '@mdx-js/mdx': 1.6.11
-      '@mdx-js/react': 1.6.11_react@16.13.1
+      '@mdx-js/mdx': 1.6.13
+      '@mdx-js/react': 1.6.13_react@16.13.1
       camelcase-css: 2.0.1
       change-case: 3.1.0
       core-js: 3.6.5
@@ -6770,11 +6769,11 @@ packages:
       '@mdx-js/react': ^1.0.0
     resolution:
       integrity: sha512-2j5voALrvJ14JR9UzY9NygatVHRpGcm15jjJRDYtnT9k5ptKkqYLuiPcQ3eBxoqwjvAamLJ8WYRhc/poP/Ezuw==
-  /gatsby-plugin-offline/3.2.18_gatsby@2.24.4:
+  /gatsby-plugin-offline/3.2.19_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
       cheerio: 1.0.0-rc.3
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       gatsby-core-utils: 1.3.12
       glob: 7.1.6
       idb-keyval: 3.2.0
@@ -6786,13 +6785,13 @@ packages:
     peerDependencies:
       gatsby: ^2.4.0
     resolution:
-      integrity: sha512-WNgljT81Opabug4PHpL1ROpZ8kmSIuylv8SFDtAS87VZnLPG7f0Lx+CdYjYCIFtz2zW6UcMFssBUajQBHuk8wg==
-  /gatsby-plugin-page-creator/2.3.17_gatsby@2.24.4:
+      integrity: sha512-cVjNTmmTgb7/n0ghkrOM61vrAcdPz07FvkCx2sAThPqZ5zxDe5LDLS+DYSRn8k/KVihdAQKx/RGrdlGuuLwEIA==
+  /gatsby-plugin-page-creator/2.3.17_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
       bluebird: 3.7.2
       fs-exists-cached: 1.0.0
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       gatsby-page-utils: 0.2.17
       glob: 7.1.6
       lodash: 4.17.19
@@ -6803,10 +6802,10 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-mIIotda+tR59tb3gk5qW3CUVSsdA608hchuX/+bKUCyuqyqZKjPffOdGUgy92Aa+mmIKgJTiGDUnIJoVsHSdtg==
-  /gatsby-plugin-react-helmet/3.3.10_gatsby@2.24.4+react-helmet@6.1.0:
+  /gatsby-plugin-react-helmet/3.3.10_gatsby@2.24.7+react-helmet@6.1.0:
     dependencies:
       '@babel/runtime': 7.10.5
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       react-helmet: 6.1.0_react@16.13.1
     dev: true
     engines:
@@ -6816,13 +6815,13 @@ packages:
       react-helmet: ^5.1.3 || ^6.0.0
     resolution:
       integrity: sha512-AcXYwmS3r298JWs6iQ3OLNxIe8L8i5a2iSdLr/SDMpHqumYm7q/vB9kCX0et5wM7DIuZ7aPXDrdi5yDCAvU5lg==
-  /gatsby-plugin-sharp/2.6.19_gatsby@2.24.4:
+  /gatsby-plugin-sharp/2.6.20_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
       async: 2.6.3
       bluebird: 3.7.2
       fs-extra: 8.1.0
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       gatsby-core-utils: 1.3.12
       got: 8.3.2
       imagemin: 6.1.0
@@ -6843,10 +6842,10 @@ packages:
     peerDependencies:
       gatsby: '>2.0.15'
     resolution:
-      integrity: sha512-0SVP2xk8Ml+hml30+oBP/SRm/ztGV6sDOlOUoEHuv6SssxkDcKc9aSScn0qB1HsKGDYDm1gcmDmw48Bq4U78rA==
-  /gatsby-plugin-theme-ui/0.3.0_gatsby@2.24.4+theme-ui@0.3.1:
+      integrity: sha512-5M6wYzxer+yWEIhq+eE7XwcDWpJqm2Nr6V14UCfbR5KYmYpkEbDVm2dw1raBFonf/XUQ15idYjPp3U0mY6xfAg==
+  /gatsby-plugin-theme-ui/0.3.0_gatsby@2.24.7+theme-ui@0.3.1:
     dependencies:
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       theme-ui: 0.3.1_react@16.13.1
     dev: false
     peerDependencies:
@@ -6854,7 +6853,7 @@ packages:
       theme-ui: ^0.2.0
     resolution:
       integrity: sha512-Q2tS8EeYMy7AAtt6hvDtEsd1uwrLMjkDNqabyXhAo38AFoWQ0oKtq9u1YqbiRvp1TK06pAMPQQ3to48LAqc9Cw==
-  /gatsby-plugin-typescript/2.4.15_gatsby@2.24.4:
+  /gatsby-plugin-typescript/2.4.16_gatsby@2.24.7:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/plugin-proposal-nullish-coalescing-operator': 7.10.4_@babel+core@7.10.5
@@ -6862,17 +6861,17 @@ packages:
       '@babel/plugin-proposal-optional-chaining': 7.10.4_@babel+core@7.10.5
       '@babel/preset-typescript': 7.10.4_@babel+core@7.10.5
       '@babel/runtime': 7.10.5
-      babel-plugin-remove-graphql-queries: 2.9.14_gatsby@2.24.4
+      babel-plugin-remove-graphql-queries: 2.9.15_gatsby@2.24.7
     engines:
       node: '>=10.13.0'
     peerDependencies:
       gatsby: '*'
     resolution:
-      integrity: sha512-sh/BypdmqcpjGJBECPzRY1l7uDmVif8gqTPwcGb38WNENgRel619URc1bJEJRtfFpYEyBKTjVL0h2C5LQHQ1QQ==
-  /gatsby-plugin-typography/2.5.10_04490de3e5135c1c856945d8c0ead4c4:
+      integrity: sha512-A95+B10jn7nCBROibfxWe2/jPtXxq4jjZpjhvPcC95xXg8q7J1Zb3USP6oJSYmhQ4EI+JPcvljlnOS6dqn//wg==
+  /gatsby-plugin-typography/2.5.10_3f93a339fd107cabcaeb882a5ed45014:
     dependencies:
       '@babel/runtime': 7.10.5
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       react: 16.13.1
       react-dom: 16.13.1_react@16.13.1
       react-typography: 0.16.19_react@16.13.1
@@ -6902,7 +6901,7 @@ packages:
       react-dom: ^16.4.2
     resolution:
       integrity: sha512-rA7qe/LjKAPnwI4KdKjvx94XIV9a4hCPT+BzKBiifTkm5sFpQyXsfEWmaFfzIaxpKxOwrWsJGpW0OA39yunL8g==
-  /gatsby-recipes/0.1.52_react@16.13.1:
+  /gatsby-recipes/0.1.53_react@16.13.1:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/generator': 7.10.5
@@ -6915,9 +6914,9 @@ packages:
       '@graphql-tools/utils': 6.0.14_graphql@14.7.0
       '@hapi/hoek': 8.5.1
       '@hapi/joi': 15.1.1
-      '@mdx-js/mdx': 1.6.11
-      '@mdx-js/react': 1.6.11_react@16.13.1
-      '@mdx-js/runtime': 1.6.11_react@16.13.1
+      '@mdx-js/mdx': 1.6.13
+      '@mdx-js/react': 1.6.13_react@16.13.1
+      '@mdx-js/runtime': 1.6.13_react@16.13.1
       acorn: 7.3.1
       acorn-jsx: 5.2.0_acorn@7.3.1
       cors: 2.8.5
@@ -6928,7 +6927,7 @@ packages:
       express-graphql: 0.9.0_graphql@14.7.0
       fs-extra: 8.1.0
       gatsby-core-utils: 1.3.12
-      gatsby-telemetry: 1.3.19
+      gatsby-telemetry: 1.3.20
       glob: 7.1.6
       graphql: 14.7.0
       graphql-compose: 6.3.8_graphql@14.7.0
@@ -6951,7 +6950,7 @@ packages:
       prettier: 2.0.5
       react: 16.13.1
       react-reconciler: 0.25.1_react@16.13.1
-      remark-mdx: 1.6.11
+      remark-mdx: 1.6.13
       remark-parse: 6.0.3
       remark-stringify: 8.1.1
       resolve-cwd: 3.0.0
@@ -6969,13 +6968,13 @@ packages:
     peerDependencies:
       react: ^16.12.0
     resolution:
-      integrity: sha512-dxba6tO/VpTA5tPXcPuYDyatqEcT5O71eeRvT3vrEQQZzC0mwQzGG6m0BT1Hh1Z61b0LqFUh5trVCxTlFbEQSw==
-  /gatsby-remark-copy-linked-files/2.3.11_gatsby@2.24.4:
+      integrity: sha512-q1dfVLUysncIOtOj9S1EQCL8TDUf3aM8Y4dEfvVYjmMMG58ad7sECSZOEQRjHKz3nJhxBCkJb9rEBKo62DvYYQ==
+  /gatsby-remark-copy-linked-files/2.3.11_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
       cheerio: 1.0.0-rc.3
       fs-extra: 8.1.0
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       is-relative-url: 3.0.0
       lodash: 4.17.19
       path-is-inside: 1.0.2
@@ -6988,10 +6987,10 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-uU0CWXEnPKlrKFO+kqqjZAEVTSbt1WuJrJYU2S8Fe2ql8N2SM7Db2yce5r4PTSqLNg6RSzOXEQBIIoeTq/yVbQ==
-  /gatsby-remark-prismjs/3.5.10_gatsby@2.24.4+prismjs@1.20.0:
+  /gatsby-remark-prismjs/3.5.10_gatsby@2.24.7+prismjs@1.20.0:
     dependencies:
       '@babel/runtime': 7.10.5
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       parse-numeric-range: 0.0.2
       prismjs: 1.20.0
       unist-util-visit: 1.4.1
@@ -7003,10 +7002,10 @@ packages:
       prismjs: ^1.15.0
     resolution:
       integrity: sha512-1lywDdXyu+y7ieZ7PsrXgwtso1n59gO5btHdbZXCFpvuYt7MHoJhb0FewkbsZ3goJMJ2q8yug5jEGaRKX2vSOQ==
-  /gatsby-remark-smartypants/2.3.10_gatsby@2.24.4:
+  /gatsby-remark-smartypants/2.3.10_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       retext: 5.0.0
       retext-smartypants: 3.0.3
       unist-util-visit: 1.4.1
@@ -7017,7 +7016,7 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-gD6tp0zWKR+6jF4TJf4MzxwmRROL+P3TnvG/ydNHWPz0yzZPWyqW7HGk0CkwazeiI4cz/BKO9pV8HBLcjunTvg==
-  /gatsby-source-filesystem/2.3.20_gatsby@2.24.4:
+  /gatsby-source-filesystem/2.3.20_gatsby@2.24.7:
     dependencies:
       '@babel/runtime': 7.10.5
       better-queue: 3.8.10
@@ -7025,7 +7024,7 @@ packages:
       chokidar: 3.4.0
       file-type: 12.4.2
       fs-extra: 8.1.0
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
       gatsby-core-utils: 1.3.12
       got: 9.6.0
       md5-file: 3.2.3
@@ -7042,7 +7041,7 @@ packages:
       gatsby: ^2.2.0
     resolution:
       integrity: sha512-zwHsOe3BipnGeHvCNz4JSzz9bWbQEFgbpkjCpmOSsPtbNaKKbk7bK8TCLGj268K24x7E5fGuXPTLqXcRfYgEOA==
-  /gatsby-telemetry/1.3.19:
+  /gatsby-telemetry/1.3.20:
     dependencies:
       '@babel/code-frame': 7.10.4
       '@babel/runtime': 7.10.5
@@ -7060,14 +7059,14 @@ packages:
       node: '>=10.13.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-pou+2FFmeZ+5hC3FNA8Nu50kLXViulWInWggdu3wi6OkeNTaIkHArCYuTH8hi71w2sv3/XZ1YKQZd7SMRUugLw==
-  /gatsby-transformer-sharp/2.5.11_49a5bcf41810380c5379bc4230761484:
+      integrity: sha512-0aeEL1O8tPgBgiOh/5lH18z9w8i3vGs8EWDQiOeGYz4Ka78wTcxyDUsO/90yt8jkqQuUo78s2vkDeqh1LWqPxg==
+  /gatsby-transformer-sharp/2.5.11_d0d1139c294a76c6e035075853aa5aea:
     dependencies:
       '@babel/runtime': 7.10.5
       bluebird: 3.7.2
       fs-extra: 8.1.0
-      gatsby: 2.24.4_86f025acd73fec7c1434f3166507ee77
-      gatsby-plugin-sharp: 2.6.19_gatsby@2.24.4
+      gatsby: 2.24.7_a03a01c773eef2d9a9b75d6c1641b50c
+      gatsby-plugin-sharp: 2.6.20_gatsby@2.24.7
       potrace: 2.1.6
       probe-image-size: 4.1.1
       semver: 5.7.1
@@ -7080,7 +7079,7 @@ packages:
       gatsby-plugin-sharp: ^2.0.0-beta.3
     resolution:
       integrity: sha512-YPfZqJhJoQxQ0d/PUnAChPMm3RLcFSS6m0RgJl8Mh/Q8k15oZIDK82oBX2dCvKcfGKCq5ReT1gmwZJKXxt/vTw==
-  /gatsby/2.24.4_86f025acd73fec7c1434f3166507ee77:
+  /gatsby/2.24.7_a03a01c773eef2d9a9b75d6c1641b50c:
     dependencies:
       '@babel/code-frame': 7.10.4
       '@babel/core': 7.10.5
@@ -7103,7 +7102,7 @@ packages:
       babel-loader: 8.1.0_13c776b87d2822e76e5e552d0872621e
       babel-plugin-add-module-exports: 0.3.3
       babel-plugin-dynamic-import-node: 2.3.3
-      babel-plugin-remove-graphql-queries: 2.9.14_gatsby@2.24.4
+      babel-plugin-remove-graphql-queries: 2.9.15_gatsby@2.24.7
       babel-preset-gatsby: 0.5.2_@babel+core@7.10.5+core-js@3.6.5
       better-opn: 1.0.0
       better-queue: 3.8.10
@@ -7142,15 +7141,15 @@ packages:
       file-loader: 1.1.11_webpack@4.43.0
       fs-exists-cached: 1.0.0
       fs-extra: 8.1.0
-      gatsby-cli: 2.12.62
+      gatsby-cli: 2.12.63
       gatsby-core-utils: 1.3.12
       gatsby-graphiql-explorer: 0.4.11
       gatsby-legacy-polyfills: 0.0.2
       gatsby-link: 2.4.13_3914268316c542370cbb046de235e031
-      gatsby-plugin-page-creator: 2.3.17_gatsby@2.24.4
-      gatsby-plugin-typescript: 2.4.15_gatsby@2.24.4
+      gatsby-plugin-page-creator: 2.3.17_gatsby@2.24.7
+      gatsby-plugin-typescript: 2.4.16_gatsby@2.24.7
       gatsby-react-router-scroll: 3.0.12_3914268316c542370cbb046de235e031
-      gatsby-telemetry: 1.3.19
+      gatsby-telemetry: 1.3.20
       glob: 7.1.6
       got: 8.3.2
       graphql: 14.7.0
@@ -7168,7 +7167,7 @@ packages:
       latest-version: 5.1.0
       lodash: 4.17.19
       md5-file: 3.2.3
-      meant: 1.0.1
+      meant: 1.0.2
       micromatch: 3.1.10
       mime: 2.4.6
       mini-css-extract-plugin: 0.8.2_webpack@4.43.0
@@ -7234,7 +7233,7 @@ packages:
       react-dom: ^16.4.2
     requiresBuild: true
     resolution:
-      integrity: sha512-/Sl4HgJhPvBzZ/JgjNrE5XVDv/o1YsJ+iHcTJCpgWj6At97Bsf4V6Y44KPc/cLTnpHvD8MJGqg1y52WWEHRRTQ==
+      integrity: sha512-H9qEG5cRnHU/lRFaX2hS++6FZbCINavL38wz+UWD95qJ3GmpVHxnob2eQYZzy32CFvprCK9469kGcN9j0jTf0g==
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -9860,9 +9859,9 @@ packages:
   /mdurl/1.0.1:
     resolution:
       integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
-  /meant/1.0.1:
+  /meant/1.0.2:
     resolution:
-      integrity: sha512-UakVLFjKkbbUwNWJ2frVLnnAtbb7D7DsloxRd3s/gDpI8rdv8W5Hp3NaDb+POBI1fQdeussER6NB8vpcRURvlg==
+      integrity: sha512-KN+1uowN/NK+sT/Lzx7WSGIj2u+3xe5n2LbwObfjOhPZiA+cCfCm6idVl0RkEfjThkw5XJ96CyRcanq6GmKtUg==
   /media-typer/0.3.0:
     engines:
       node: '>= 0.6'
@@ -10335,10 +10334,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-yi05ZoiuNNEbyT/xXfSySZE+yVnQW6fxPZuFbLyS1s6b5Kw3HzV2PHOM4XR+nsjzkHxByK+2Wg+yCQbe35l8dw==
-  /node-addon-api/3.0.1:
+  /node-addon-api/3.0.0:
     dev: true
     resolution:
-      integrity: sha512-YUpjl57P55u2yUaKX5Bgy4t5s6SCNYMg+62XNg+k41aYbBL1NgWrZfcgljR5MxDxHDjzl0qHDNtH6SkW4DXNCA==
+      integrity: sha512-sSHCgWfJ+Lui/u+0msF3oyCgvdkhxDbkCS6Q8uiJquzOimkJBvX6hl5aSSA7DR1XbMpdM8r7phjcF63sF4rkKg==
   /node-emoji/1.10.0:
     dependencies:
       lodash.toarray: 4.4.0
@@ -11140,7 +11139,7 @@ packages:
       integrity: sha512-flNUPP27r3vJpROi0/R3/2efgKkyXqnXwyP1KQ2U0SfFRgdizOdWfvrrvJg1LuOoxs7GQhmxJlq23IpQ/BkByg==
   /parse5/3.0.3:
     dependencies:
-      '@types/node': 14.0.23
+      '@types/node': 14.0.24
     dev: true
     resolution:
       integrity: sha512-rgO9Zg5LLLkfJF9E6CCmXlSE4UVceloys8JrFqCcHloC3usd/kJCyPDwH2SOlzix2j3xaP9sUX3e8+kvkuleAA==
@@ -11394,7 +11393,7 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-7Wjy+9E3WwLOEL30D+m8TSTF7qJJUJLONBnwQp0518siuMxUQUbgZwssaFX+QKlZkjHZcw/IpZCt/H0srrntSg==
-  /portfinder/1.0.26:
+  /portfinder/1.0.27:
     dependencies:
       async: 2.6.3
       debug: 3.2.6
@@ -11402,7 +11401,7 @@ packages:
     engines:
       node: '>= 0.12.0'
     resolution:
-      integrity: sha512-Xi7mKxJHHMI3rIUrnm/jjUgwhbYMkp/XKEcZX3aG4BrumLpq3nmoQMX+ClYnDZnZ/New7IatC1no5RX0zo1vXQ==
+      integrity: sha512-bJ3U3MThKnyJ9Dx1Idtm5pQmxXqw08+XOHhi/Lie8OF1OlhVaBFhsntAIhkZYjfDcCzszSr0w1yCbccThhzgxQ==
   /posix-character-classes/0.1.1:
     engines:
       node: '>=0.10.0'
@@ -11577,13 +11576,13 @@ packages:
       integrity: sha512-6jt9XZwUhwmRUhb/CkyJY020PYaPJsCyt3UjbaWo6XEbH/94Hmv6MP7fG2C5NDU/BcHzyGYxNtHvM+LTf9HrYw==
   /postcss-modules-local-by-default/1.2.0:
     dependencies:
-      css-selector-tokenizer: 0.7.2
+      css-selector-tokenizer: 0.7.3
       postcss: 6.0.23
     resolution:
       integrity: sha1-99gMOYxaOT+nlkRmvRlQCn1hwGk=
   /postcss-modules-scope/1.1.0:
     dependencies:
-      css-selector-tokenizer: 0.7.2
+      css-selector-tokenizer: 0.7.3
       postcss: 6.0.23
     resolution:
       integrity: sha1-1upkmUx5+XtipytCb75gVqGUu5A=
@@ -12583,7 +12582,7 @@ packages:
   /remark-footnotes/1.0.0:
     resolution:
       integrity: sha512-X9Ncj4cj3/CIvLI2Z9IobHtVi8FVdUrdJkCNaL9kdX8ohfsi18DXHsCVd/A7ssARBdccdDb5ODnt62WuEWaM/g==
-  /remark-lint-no-dead-urls/1.0.2:
+  /remark-lint-no-dead-urls/1.1.0:
     dependencies:
       check-links: 1.1.8
       is-online: 8.4.0
@@ -12593,25 +12592,25 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-YfTrZB3D5SMyoasvq9zMLXHnh/DD6/wOqpCEmzHRz/GL8Ps3SwvaTODGT48er7HoSUylX3t2BeCZw+ib3o1cDg==
+      integrity: sha512-it3EZmMQ+hwGhUf60NkXN0mMIFuFkS0cxdbgEbhZ/Fj1PlUBpe3gDBtWJ/sqNwSNvQlNSzpvMQkNHSoAhlsVjA==
   /remark-lint/7.0.1:
     dependencies:
       remark-message-control: 6.0.0
     dev: true
     resolution:
       integrity: sha512-caZXo3qhuBxzvq9JSJFVQ/ERDq/6TJVgWn0KDwKOIJCGOuLXfQhby5XttUq+Rn7kLbNMtvwfWHJlte14LpaeXQ==
-  /remark-mdx/1.6.11:
+  /remark-mdx/1.6.13:
     dependencies:
       '@babel/core': 7.10.5
       '@babel/helper-plugin-utils': 7.10.4
       '@babel/plugin-proposal-object-rest-spread': 7.10.4_@babel+core@7.10.5
       '@babel/plugin-syntax-jsx': 7.10.4_@babel+core@7.10.5
-      '@mdx-js/util': 1.6.11
+      '@mdx-js/util': 1.6.13
       is-alphabetical: 1.0.4
       remark-parse: 8.0.2
       unified: 9.0.0
     resolution:
-      integrity: sha512-nijtvQqyv2B6vBAcyi1GEWQl6VKepL2TX8b/vxcAKee6ZBd5AZKJDpIB2V5BbU015iReU/hs6UjYPXSt/d8bvg==
+      integrity: sha512-LlaW2PpGl13THFHajl0EEpAnMkrZO2vmn4PPGJzy7vKfKf2UMioKa7zszfV3cEwKu1aHqqnjH5ZwuZj1hexHJw==
   /remark-message-control/6.0.0:
     dependencies:
       mdast-comment-marker: 1.1.2
@@ -13260,7 +13259,7 @@ packages:
     dependencies:
       color: 3.1.2
       detect-libc: 1.0.3
-      node-addon-api: 3.0.1
+      node-addon-api: 3.0.0
       npmlog: 4.1.2
       prebuild-install: 5.3.5
       semver: 7.3.2
@@ -15284,7 +15283,7 @@ packages:
       loglevel: 1.6.8
       opn: 5.5.0
       p-retry: 3.0.1
-      portfinder: 1.0.26
+      portfinder: 1.0.27
       schema-utils: 1.0.0
       selfsigned: 1.10.7
       semver: 6.3.0
@@ -15854,22 +15853,22 @@ packages:
 specifiers:
   '@commitlint/config-conventional': ^9.1.1
   '@emotion/core': ^10.0.28
-  '@mdx-js/mdx': ^1.6.11
-  '@mdx-js/react': ^1.6.11
+  '@mdx-js/mdx': ^1.6.13
+  '@mdx-js/react': ^1.6.13
   '@svgr/cli': ^5.4.0
   babel-eslint: ^10.1.0
   commitlint: ^9.1.0
   eslint: ^7.5.0
   eslint-plugin-mdx: ^1.7.1
   eslint-plugin-react: ^7.20.3
-  gatsby: ^2.24.4
+  gatsby: ^2.24.7
   gatsby-image: ^2.4.13
   gatsby-plugin-exclude: ^1.0.2
-  gatsby-plugin-manifest: ^2.4.18
+  gatsby-plugin-manifest: ^2.4.19
   gatsby-plugin-mdx: ^1.2.27
-  gatsby-plugin-offline: ^3.2.18
+  gatsby-plugin-offline: ^3.2.19
   gatsby-plugin-react-helmet: ^3.3.10
-  gatsby-plugin-sharp: ^2.6.19
+  gatsby-plugin-sharp: ^2.6.20
   gatsby-plugin-theme-ui: ^0.3.0
   gatsby-plugin-typography: ^2.5.10
   gatsby-remark-copy-linked-files: ^2.3.11
@@ -15890,7 +15889,7 @@ specifiers:
   react-typography: ^0.16.19
   remark-cli: ^8.0.1
   remark-lint: ^7.0.1
-  remark-lint-no-dead-urls: ^1.0.2
+  remark-lint-no-dead-urls: ^1.1.0
   remark-validate-links: ^10.0.2
   stylelint: ^13.6.1
   stylelint-config-standard: ^20.0.0
