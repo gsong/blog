@@ -8,6 +8,7 @@ import GitHub from "./icons/GitHub";
 import HeadShot from "./HeadShot";
 import Instagram from "./icons/Instagram";
 import LinkedIn from "./icons/LinkedIn";
+import Rss from "./icons/Rss";
 import SEO from "./SEO";
 import Twitter from "./icons/Twitter";
 import { global } from "../styles";
@@ -33,13 +34,22 @@ const Layout = ({
           display: "flex",
           flexWrap: "wrap",
           fontSize: "sm",
-          justifyContent: "space-between",
+          justifyContent: "center",
           marginBottom: 4,
           marginTop: 2,
         }}
       >
         <div>George Song &copy; {new Date().getFullYear()}</div>
-        <div sx={{ display: "flex", fontSize: "xl" }}>
+        <div
+          sx={{
+            display: "flex",
+            fontSize: "xl",
+
+            "@media (min-width: 420px)": {
+              marginLeft: "auto",
+            },
+          }}
+        >
           <SocialLink
             href="https://twitter.com/zukefresh"
             aria-label="Visit my Twitter"
@@ -66,6 +76,12 @@ const Layout = ({
             aria-label="Visit my LinkedIn"
           >
             <LinkedIn />
+          </SocialLink>
+          <SocialLink
+            href="/articles/rss.xml"
+            aria-label="Subscribe to My RSS Feed"
+          >
+            <Rss />
           </SocialLink>
         </div>
       </footer>
