@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "George Song’s Website",
     description: "Musings of a middle-aged developer.",
+    siteUrl: "https://gsong.dev",
     author: "@zukefresh",
   },
 
@@ -87,8 +88,75 @@ module.exports = {
         icon: "./src/images/gs-icon.png",
       },
     },
+
+    {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [makeFeed()],
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
 };
+
+function makeFeed() {
+  const query = `
+    {
+      allMdx(
+        filter: { fileAbsolutePath: { glob: "**/articles/**" } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
+        nodes {
+          frontmatter {
+            title
+            date
+            description
+          }
+          html
+          slug
+        }
+      }
+    }
+  `;
+
+  const serialize = ({
+    query: {
+      site: {
+        siteMetadata: { siteUrl },
+      },
+      allMdx,
+    },
+  }) =>
+    allMdx.nodes.map(({ frontmatter, html, slug }) => {
+      const url = [siteUrl, slug].join("/");
+
+      return {
+        ...frontmatter,
+        url,
+        guid: url,
+        custom_elements: [{ "content:encoded": html }],
+      };
+    });
+
+  return {
+    query,
+    serialize,
+    output: "/articles/rss.xml",
+    title: "George Song’s Articles",
+  };
+}
