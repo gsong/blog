@@ -8,6 +8,51 @@ const codeBlockWidth = "860px";
 const codeBlockMargin = (compensate = "0px") =>
   `calc((min(100vw, ${codeBlockWidth}) / 2 * -1) + ${compensate})`;
 
+export const global = (theme) => {
+  const { colors, radii, shadows, space } = theme;
+
+  return {
+    html: {
+      boxSizing: "border-box",
+    },
+
+    "*, *:before, *:after": {
+      boxSizing: "inherit",
+    },
+
+    body: {
+      backgroundColor: colors.background[0],
+      color: colors.font.body[1],
+      margin: "auto",
+      maxWidth: bodyWidth,
+      width: contentWidth,
+    },
+
+    a: {
+      color: colors.link,
+      textDecoration: "none",
+
+      ":focus,:hover": { textDecoration: "underline" },
+    },
+
+    button: {
+      backgroundColor: colors.button[0],
+      border: 0,
+      borderRadius: radii[1],
+      boxShadow: shadows.md,
+      color: "white",
+      padding: `${space[2]} ${space[4]}`,
+
+      ":active": { boxShadow: shadows.base },
+      ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
+    },
+
+    h3: { fontWeight: "normal" },
+
+    ...prismStyles(theme),
+  };
+};
+
 const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
   "code, pre": {
     '&[class*="language-"]': {
@@ -67,48 +112,3 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
     },
   },
 });
-
-export const global = (theme) => {
-  const { colors, radii, shadows, space } = theme;
-
-  return {
-    html: {
-      boxSizing: "border-box",
-    },
-
-    "*, *:before, *:after": {
-      boxSizing: "inherit",
-    },
-
-    body: {
-      backgroundColor: colors.background[0],
-      color: colors.font.body[1],
-      margin: "auto",
-      maxWidth: bodyWidth,
-      width: contentWidth,
-    },
-
-    a: {
-      color: colors.link,
-      textDecoration: "none",
-
-      ":focus,:hover": { textDecoration: "underline" },
-    },
-
-    button: {
-      backgroundColor: colors.button[0],
-      border: 0,
-      borderRadius: radii[1],
-      boxShadow: shadows.md,
-      color: "white",
-      padding: `${space[2]} ${space[4]}`,
-
-      ":active": { boxShadow: shadows.base },
-      ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
-    },
-
-    h3: { fontWeight: "normal" },
-
-    ...prismStyles(theme),
-  };
-};
