@@ -12,8 +12,6 @@ const Home = ({ children, ...props }) => {
   );
 };
 
-const imageSize = 115;
-
 const Header = () => {
   const { theme } = useThemeUI();
 
@@ -39,13 +37,7 @@ const Header = () => {
       </h1>
 
       <HeadShot
-        sx={{
-          borderRadius: `${theme.radii[1]} 30px`,
-          maxHeight: imageSize,
-          maxWidth: imageSize,
-          minHeight: imageSize,
-          minWidth: imageSize,
-        }}
+        sx={{ borderRadius: `${theme.radii[1]} 30px`, flexShrink: 0 }}
       />
     </header>
   );
