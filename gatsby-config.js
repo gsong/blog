@@ -50,12 +50,19 @@ module.exports = {
           default: path.resolve("./src/components/Layout.js"),
         },
         gatsbyRemarkPlugins: [
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+          {
+            resolve: "gatsby-remark-autolink-headers",
+            options: {
+              className: "header-link",
+              isIconAfterHeader: true,
+            },
+          },
           {
             resolve: "gatsby-remark-prismjs",
             options: { showLineNumbers: true },
           },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
         ],
       },
     },

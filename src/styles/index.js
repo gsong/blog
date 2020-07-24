@@ -49,6 +49,8 @@ export const global = (theme) => {
 
     h3: { fontWeight: "normal" },
 
+    ".header-link": { marginLeft: space[1] },
+
     ...prismStyles(theme),
   };
 };

@@ -25,6 +25,7 @@ devDependencies:
   gatsby-plugin-react-helmet: 3.3.10_79d630ae3f255b8a141b630c3ed45156
   gatsby-plugin-sharp: 2.6.22_gatsby@2.24.11
   gatsby-plugin-typography: 2.5.10_f0512b38f05d22c0c430b0a81fc1b875
+  gatsby-remark-autolink-headers: 2.3.11_gatsby@2.24.11
   gatsby-remark-copy-linked-files: 2.3.11_gatsby@2.24.11
   gatsby-remark-prismjs: 3.5.10_gatsby@2.24.11+prismjs@1.20.0
   gatsby-remark-smartypants: 2.3.10_gatsby@2.24.11
@@ -6984,6 +6985,21 @@ packages:
       react: ^16.12.0
     resolution:
       integrity: sha512-lEd57MLQyBpO3+aoxssnUbwnqFVv8jKIBCclIQONNpLzBl3zml1VAaRx12tnsREn8YEtfYZayM2t3QLiGi9Yzw==
+  /gatsby-remark-autolink-headers/2.3.11_gatsby@2.24.11:
+    dependencies:
+      '@babel/runtime': 7.10.5
+      gatsby: 2.24.11_4ee0a67fea41a82503cc2348e37027af
+      github-slugger: 1.3.0
+      lodash: 4.17.19
+      mdast-util-to-string: 1.1.0
+      unist-util-visit: 1.4.1
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    peerDependencies:
+      gatsby: ^2.0.0
+    resolution:
+      integrity: sha512-jYGgZ+NTbVxJmyS6z1oojWxOR12R7MGl4jM5aOXSmPuTSo8gbpm3aW7l5XMyud5fDDdP3xfbYuTX4RvBUWrx7g==
   /gatsby-remark-copy-linked-files/2.3.11_gatsby@2.24.11:
     dependencies:
       '@babel/runtime': 7.10.5
@@ -15906,6 +15922,7 @@ specifiers:
   gatsby-plugin-sharp: ^2.6.22
   gatsby-plugin-theme-ui: ^0.3.0
   gatsby-plugin-typography: ^2.5.10
+  gatsby-remark-autolink-headers: ^2.3.11
   gatsby-remark-copy-linked-files: ^2.3.11
   gatsby-remark-prismjs: ^3.5.10
   gatsby-remark-smartypants: ^2.3.10
