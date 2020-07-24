@@ -39,7 +39,11 @@ const Layout = ({
           marginTop: 2,
         }}
       >
-        <Link to="/" sx={{ color: "font.body.0" }} className="link-hover">
+        <Link
+          to="/"
+          sx={{ color: "font.body.0", py: 3 }}
+          className="link-hover"
+        >
           George Song &copy; {new Date().getFullYear()}
         </Link>
         <div
