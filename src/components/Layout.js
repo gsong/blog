@@ -39,7 +39,9 @@ const Layout = ({
           marginTop: 2,
         }}
       >
-        <div>George Song &copy; {new Date().getFullYear()}</div>
+        <Link to="/" sx={{ color: "font.body.0" }} className="link-hover">
+          George Song &copy; {new Date().getFullYear()}
+        </Link>
         <div
           sx={{
             display: "flex",
@@ -103,8 +105,9 @@ const Header = () => (
           fontSize: "lg",
 
           // stylelint-disable-next-line
-          ":focus,:hover": { color: "link", textDecoration: "none" },
+          ":focus,:hover": { textDecoration: "none" },
         }}
+        className="link-hover"
       >
         <HeadShot
           sx={{
@@ -120,15 +123,7 @@ const Header = () => (
 );
 
 const SocialLink = ({ children, ...props }) => (
-  <a
-    {...props}
-    sx={{
-      color: "font.body.0",
-
-      // stylelint-disable-next-line
-      ":focus,:hover": { color: "link" },
-    }}
-  >
+  <a {...props} sx={{ color: "font.body.0" }} className="link-hover">
     <div
       sx={{
         display: "flex",

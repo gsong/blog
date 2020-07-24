@@ -17,7 +17,7 @@ const Article = ({ children, ...props }) => {
       <article>
         <h1 sx={{ color: "font.articleH1" }}>{title}</h1>
         <p>
-          <a {...{ href }} sx={link}>
+          <a {...{ href }} sx={link} className="link-hover">
             {published}
           </a>
         </p>
@@ -35,8 +35,6 @@ const makeGitHubUrl = (uri, srcPath) => {
 const link = {
   color: "font.body.0",
   fontSize: "sm",
-
-  ":hover": { color: "link" },
 };
 
 export default Article;

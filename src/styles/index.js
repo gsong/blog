@@ -50,6 +50,7 @@ export const global = (theme) => {
     h3: { fontWeight: "normal" },
 
     ".header-link": { marginLeft: space[1] },
+    ".link-hover": { ":focus,:hover": { color: colors.link } },
 
     ...prismStyles(theme),
   };
