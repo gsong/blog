@@ -47,8 +47,6 @@ export const global = (theme) => {
       ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
     },
 
-    h3: { fontWeight: "normal" },
-
     ".header-link": { paddingLeft: space[2], paddingRight: space[2] },
     ".link-hover": { ":focus,:hover": { color: colors.link } },
 
@@ -103,6 +101,18 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
     marginRight: "-1em",
     paddingLeft: "0.75em",
     paddingRight: "1em",
+  },
+
+  "h2,h3": {
+    'code[class*="language-"]': {
+      backgroundColor: "unset",
+      color: "unset",
+      padding: 0,
+      fontSize: "inherit",
+      lineHeight: "inherit",
+
+      "::selection": { backgroundColor: "highlight" },
+    },
   },
 
   li: {
