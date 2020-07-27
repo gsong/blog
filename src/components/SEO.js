@@ -3,8 +3,10 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
-  const data = useStaticQuery(query);
-  const metaDescription = description || data.site.siteMetadata.description;
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(query);
+  const metaDescription = description || siteMetadata.description;
 
   return (
     <Helmet
@@ -12,7 +14,7 @@ const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: "description",
@@ -36,7 +38,7 @@ const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
         },
         {
           name: "twitter:creator",
-          content: data.site.siteMetadata.author,
+          content: siteMetadata.twitter,
         },
         {
           name: "twitter:title",
@@ -66,7 +68,7 @@ const query = graphql`
       siteMetadata {
         title
         description
-        author
+        twitter
       }
     }
   }

@@ -1,12 +1,15 @@
 const path = require("path");
 
+const siteMetadata = {
+  title: "George Song’s Website",
+  description: "Musings of a middle-aged developer.",
+  siteUrl: "https://gsong.dev",
+  author: "george@gsong.dev (George Song)",
+  twitter: "@zukefresh",
+};
+
 module.exports = {
-  siteMetadata: {
-    title: "George Song’s Website",
-    description: "Musings of a middle-aged developer.",
-    siteUrl: "https://gsong.dev",
-    author: "@zukefresh",
-  },
+  siteMetadata,
 
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -114,14 +117,16 @@ module.exports = {
           {
             site {
               siteMetadata {
-                title
                 description
                 siteUrl
                 site_url: siteUrl
+                managingEditor: author
+                webMaster: author
               }
             }
           }
         `,
+
         feeds: [makeFeed()],
       },
     },
@@ -137,13 +142,13 @@ function makeFeed() {
     {
       allMdx(
         filter: { fileAbsolutePath: { glob: "**/articles/**" } }
-        sort: { order: DESC, fields: frontmatter___date }
+        sort: { order: DESC, fields: frontmatter___published }
       ) {
         nodes {
           frontmatter {
             title
-            date
             description
+            date: published
           }
           html
           slug
@@ -171,10 +176,15 @@ function makeFeed() {
       };
     });
 
+  const output = "/articles/rss.xml";
+
   return {
     query,
     serialize,
-    output: "/articles/rss.xml",
+    output,
     title: "George Song’s Articles",
+    copyright: `Copyright ${new Date().getFullYear()}, George Song`,
+    language: "en",
+    feed_url: siteMetadata.siteUrl + output,
   };
 }

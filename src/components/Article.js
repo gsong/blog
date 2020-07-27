@@ -6,10 +6,10 @@ import { toLocaleDateString } from "../utils";
 
 const Article = ({ children, ...props }) => {
   const {
-    frontmatter: { date, title },
+    frontmatter: { title, published, updated },
     srcPath,
   } = props.pageContext;
-  const published = toLocaleDateString(date);
+  const [displayDate, a11yDate] = makeDates(published, updated);
   const href = makeGitHubUrl(props.uri, srcPath);
 
   return (
@@ -17,14 +17,33 @@ const Article = ({ children, ...props }) => {
       <article>
         <h1 sx={{ color: "font.articleH1" }}>{title}</h1>
         <p>
-          <a {...{ href }} sx={link} className="link-hover">
-            {published}
+          <a
+            {...{ href }}
+            sx={link}
+            className="link-hover"
+            aria-label={a11yDate}
+          >
+            {displayDate}
           </a>
         </p>
         {children}
       </article>
     </Layout>
   );
+};
+
+const makeDates = (published, updated) => {
+  let display = toLocaleDateString(published);
+  let a11y = `Published on ${display}`;
+  if (updated) {
+    const updatedDisplay = toLocaleDateString(updated);
+    display = [
+      `Published ${display}`,
+      `updated ${toLocaleDateString(updated)}`,
+    ].join(", ");
+    a11y = [a11y, `updated on ${updatedDisplay}`].join(", ");
+  }
+  return [display, a11y];
 };
 
 const makeGitHubUrl = (uri, srcPath) => {
