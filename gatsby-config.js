@@ -49,9 +49,8 @@ module.exports = {
           content: path.resolve("./src/components/Article.js"),
           default: path.resolve("./src/components/Layout.js"),
         },
+
         gatsbyRemarkPlugins: [
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
           {
             resolve: "gatsby-remark-autolink-headers",
             options: {
@@ -59,6 +58,18 @@ module.exports = {
               isIconAfterHeader: true,
             },
           },
+
+          {
+            resolve: "gatsby-remark-table-of-contents",
+            options: {
+              exclude: ["Intermission", "Table of Contents"],
+              toHeading: 3,
+            },
+          },
+
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+
           {
             resolve: "gatsby-remark-prismjs",
             options: { showLineNumbers: true },

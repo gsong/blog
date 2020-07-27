@@ -29,6 +29,7 @@ devDependencies:
   gatsby-remark-copy-linked-files: 2.3.11_gatsby@2.24.11
   gatsby-remark-prismjs: 3.5.10_gatsby@2.24.11+prismjs@1.20.0
   gatsby-remark-smartypants: 2.3.10_gatsby@2.24.11
+  gatsby-remark-table-of-contents: 0.0.9
   gatsby-source-filesystem: 2.3.23_gatsby@2.24.11
   gatsby-transformer-sharp: 2.5.11_6b687a01b81d9b23cc78c64daed95b9c
   gh-pages: 3.1.0
@@ -7047,6 +7048,13 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-gD6tp0zWKR+6jF4TJf4MzxwmRROL+P3TnvG/ydNHWPz0yzZPWyqW7HGk0CkwazeiI4cz/BKO9pV8HBLcjunTvg==
+  /gatsby-remark-table-of-contents/0.0.9:
+    dependencies:
+      js-yaml: 3.14.0
+      mdast-util-toc: 4.2.0
+    dev: true
+    resolution:
+      integrity: sha512-qGBP31v9qAz/g0HfwG/kEyJq/OdrDbdEVw1VzaX1uodXZo6IzhYhcx7Lg+S7aohmKafc9f59BfSFOu4hrw2Xkw==
   /gatsby-source-filesystem/2.3.23_gatsby@2.24.11:
     dependencies:
       '@babel/runtime': 7.10.5
@@ -9881,6 +9889,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Za0hqL1PqWrvxGtA/3NH9D5nhGAUS9grMM4obEAz5+zsk1RIw/vWUchkaoDLNdrwk05A0CSC5eEXng36/1qE5w==
+  /mdast-util-toc/4.2.0:
+    dependencies:
+      extend: 3.0.2
+      github-slugger: 1.3.0
+      mdast-util-to-string: 1.1.0
+      unist-util-is: 3.0.0
+      unist-util-visit: 1.4.1
+    dev: true
+    resolution:
+      integrity: sha512-BEbxg3GtAsvswmV9bMAV/WJA7v0CsG5tYk90xnTlIeCnnBKD6Cof3KEg/K3xQ1O2FRyJKMWkgKZB2mpnOjA0tg==
   /mdn-data/2.0.4:
     resolution:
       integrity: sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==
@@ -15926,6 +15944,7 @@ specifiers:
   gatsby-remark-copy-linked-files: ^2.3.11
   gatsby-remark-prismjs: ^3.5.10
   gatsby-remark-smartypants: ^2.3.10
+  gatsby-remark-table-of-contents: ^0.0.9
   gatsby-source-filesystem: ^2.3.23
   gatsby-transformer-sharp: ^2.5.11
   gh-pages: ^3.1.0
