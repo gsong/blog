@@ -2,6 +2,7 @@
 title: React.useReducer Reducer Patterns, Part 1
 description: There's more than one way to write reducers, part 1.
 published: 2020-07-19T12:06:41-07:00
+updated: 2020-07-28T12:32:15-07:00
 keywords:
   - javascript
   - react
@@ -161,6 +162,13 @@ the current state.
   title="current state reducer"
   style={{ maxHeight: 375 }}
 />
+
+## Takeaways
+
+- The primary job of a reducer is to produce a new state.
+- A reducer function can take zero, one, or two params:
+  `([currentState], [dispachedAction])`.
+- `dispatch()` signals the `useReducer` hook to invoke the reducer.
 
 ## Intermission
 

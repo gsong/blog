@@ -2,6 +2,7 @@
 title: React.useReducer Reducer Patterns, Part 2
 description: There's more than one way to write reducers, part 2.
 published: 2020-07-25T18:53:56-07:00
+updated: 2020-07-28T12:32:06-07:00
 keywords:
   - javascript
   - react
@@ -243,6 +244,15 @@ example, we're dispatching callback functions! 🤯
   sandbox="reducer-pattern-022-1jpr0"
   title="dispatch functions"
 />
+
+## Takeaways
+
+- Dispatched actions can take any shape you want: `undefined`, a value, an
+  object, or even a function.
+- The `action` parameter is what's commonly shared between the `dispatch()` and
+  `reducer()` functions—it's their private, internal contract.
+- React.useState is syntactic sugar for one specific use case of
+  React.useReducer.
 
 ## Intermission
 
