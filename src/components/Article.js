@@ -10,7 +10,6 @@ const Article = ({ children, ...props }) => {
     srcPath,
   } = props.pageContext;
   const [displayDate, a11yDate] = makeDates(published, updated);
-  const href = makeGitHubUrl(props.uri, srcPath);
 
   return (
     <Layout {...props}>
@@ -18,7 +17,7 @@ const Article = ({ children, ...props }) => {
         <h1 sx={{ color: "font.articleH1" }}>{title}</h1>
         <p>
           <a
-            {...{ href }}
+            href={`https://github.com/gsong/personal-site/commits/main${srcPath}`}
             sx={link}
             className="link-hover"
             aria-label={a11yDate}
@@ -44,11 +43,6 @@ const makeDates = (published, updated) => {
     a11y = [a11y, `updated on ${updatedDisplay}`].join(", ");
   }
   return [display, a11y];
-};
-
-const makeGitHubUrl = (uri, srcPath) => {
-  const relativePath = srcPath.slice(srcPath.indexOf(uri));
-  return `https://github.com/gsong/personal-site/commits/main/content${relativePath}`;
 };
 
 const link = {

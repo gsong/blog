@@ -7,7 +7,7 @@ exports.onCreatePage = ({ page, actions }) => {
     ...page,
     context: {
       ...page.context,
-      srcPath: page.componentPath,
+      srcPath: page.componentPath.replace(__dirname, ""),
     },
   });
 };
