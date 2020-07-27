@@ -3,10 +3,11 @@ import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 const bodyWidth = "600px";
-const contentWidth = "95vw";
 const codeBlockWidth = "860px";
 const codeBlockMargin = (compensate = "0px") =>
   `calc((min(100vw, ${codeBlockWidth}) / 2 * -1) + ${compensate})`;
+
+export const contentWidth = "95vw";
 
 export const global = (theme) => {
   const { colors, radii, shadows, space } = theme;
