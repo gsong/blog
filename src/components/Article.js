@@ -34,13 +34,13 @@ const Article = ({ children, ...props }) => {
 const makeDates = (published, updated) => {
   let display = toLocaleDateString(published);
   let a11y = `Published on ${display}`;
+
   if (updated) {
     const updatedDisplay = toLocaleDateString(updated);
-    display = [
-      `Published ${display}`,
-      `updated ${toLocaleDateString(updated)}`,
-    ].join(", ");
-    a11y = [a11y, `updated on ${updatedDisplay}`].join(", ");
+
+    display = `${display} (updated ${updatedDisplay})`;
+
+    a11y = [a11y, `Updated on ${updatedDisplay}`].join(". ");
   }
   return [display, a11y];
 };
