@@ -9,6 +9,7 @@ keywords:
 ---
 
 import CodeSandbox from "components/CodeSandbox";
+import DispatchFlow from "./DispatchFlow";
 
 [In part 1][part-1], we looked at reducer patterns which didn't rely on any
 params, or just the current state to calculate the next state. We also learned
@@ -24,7 +25,7 @@ exclude: ['Table of Contents', 'Use Case', 'Solution', 'Intermission']
 
 ## Reducer Using `action`
 
-![React.useReducer dispatch flow](./dispatch-flow.svg)
+<DispatchFlow />
 
 Remember that `(currentState, action) => newState` is the complete reducer
 signature. In patterns we've explored so far, we haven't used the `action`
