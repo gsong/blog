@@ -8,7 +8,7 @@ import { isBrowser, isIE11 } from "../utils";
 const CodeSandbox = ({
   as: As = "h2",
   sandbox,
-  header = "👩‍💻 Try It Out for Yourself",
+  header = "👩‍💻 Try It Out",
   title,
   ...props
 }) => {
@@ -22,7 +22,7 @@ const CodeSandbox = ({
     </p>
   ) : (
     <>
-      {header && <As>{header}</As>}
+      {header ? <As>{header}</As> : null}
       {shouldLoad ? (
         <>
           <p>

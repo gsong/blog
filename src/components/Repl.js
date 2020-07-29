@@ -8,7 +8,7 @@ import { isIE11 } from "../utils";
 const Repl = ({
   as: As = "h2",
   repl,
-  header = "👩‍💻 Try It Out for Yourself",
+  header = "👩‍💻 Try It Out",
   title,
   ...props
 }) => {
@@ -22,7 +22,7 @@ const Repl = ({
     </p>
   ) : (
     <>
-      {header && <As>{header}</As>}
+      {header ? <As>{header}</As> : null}
       {shouldLoad ? (
         <>
           <p>
