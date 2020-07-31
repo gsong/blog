@@ -4,97 +4,100 @@ import { Global } from "@emotion/core";
 import { Link } from "gatsby";
 import { jsx } from "theme-ui";
 
-import GitHub from "./icons/GitHub";
 import HeadShot from "./HeadShot";
-import Instagram from "./icons/Instagram";
-import LinkedIn from "./icons/LinkedIn";
-import Rss from "./icons/Rss";
 import SEO from "./SEO";
-import Twitter from "./icons/Twitter";
+import { Email, GitHub, Instagram, LinkedIn, Rss, Twitter } from "./icons";
 import { global } from "../styles";
 
 const Layout = ({
   children,
   header = <Header />,
   pageContext: { frontmatter },
-}) => {
-  return (
-    <React.Fragment>
-      <Global styles={global} />
-      <SEO {...frontmatter} />
+}) => (
+  <React.Fragment>
+    <Global styles={global} />
+    <SEO {...frontmatter} />
 
-      {header}
+    {header}
 
-      <main>{children}</main>
+    <main>{children}</main>
 
-      <footer
+    <footer
+      sx={{
+        alignItems: "center",
+        color: "font.body.0",
+        display: "flex",
+        flexWrap: "wrap",
+        fontSize: "sm",
+        justifyContent: "center",
+        marginBottom: 4,
+        marginTop: 2,
+      }}
+    >
+      <Link
+        to="/"
+        sx={{ color: "font.body.0", py: 3 }}
+        className="link-hover"
+        aria-label="Return to homepage"
+      >
+        George Song &copy; {new Date().getFullYear()}
+      </Link>
+      <div
         sx={{
-          alignItems: "center",
-          color: "font.body.0",
           display: "flex",
-          flexWrap: "wrap",
-          fontSize: "sm",
-          justifyContent: "center",
-          marginBottom: 4,
-          marginTop: 2,
+          fontSize: "xl",
+
+          "@media (min-width: 470px)": {
+            marginLeft: "auto",
+          },
         }}
       >
-        <Link
-          to="/"
-          sx={{ color: "font.body.0", py: 3 }}
-          className="link-hover"
-          aria-label="Return to homepage"
+        <SocialLink
+          href="https://twitter.com/zukefresh"
+          aria-label="Visit my Twitter"
         >
-          George Song &copy; {new Date().getFullYear()}
-        </Link>
-        <div
-          sx={{
-            display: "flex",
-            fontSize: "xl",
+          <Twitter />
+        </SocialLink>
 
-            "@media (min-width: 420px)": {
-              marginLeft: "auto",
-            },
-          }}
+        <SocialLink
+          href={`mailto:george@gsong.dev?subject=${encodeURIComponent(
+            frontmatter.title,
+          )}`}
+          aria-label="Email me"
         >
-          <SocialLink
-            href="https://twitter.com/zukefresh"
-            aria-label="Visit my Twitter"
-          >
-            <Twitter />
-          </SocialLink>
+          <Email />
+        </SocialLink>
 
-          <SocialLink
-            href="https://github.com/gsong/personal-site"
-            aria-label="Visit my GitHub"
-          >
-            <GitHub />
-          </SocialLink>
+        <SocialLink
+          href="https://github.com/gsong/personal-site"
+          aria-label="Visit my GitHub"
+        >
+          <GitHub />
+        </SocialLink>
 
-          <SocialLink
-            href="https://www.instagram.com/zukefresh/"
-            aria-label="Visit my Instagram"
-          >
-            <Instagram />
-          </SocialLink>
+        <SocialLink
+          href="https://www.instagram.com/zukefresh/"
+          aria-label="Visit my Instagram"
+        >
+          <Instagram />
+        </SocialLink>
 
-          <SocialLink
-            href="https://www.linkedin.com/in/gsong/"
-            aria-label="Visit my LinkedIn"
-          >
-            <LinkedIn />
-          </SocialLink>
-          <SocialLink
-            href="/articles/rss.xml"
-            aria-label="Subscribe to My RSS Feed"
-          >
-            <Rss />
-          </SocialLink>
-        </div>
-      </footer>
-    </React.Fragment>
-  );
-};
+        <SocialLink
+          href="https://www.linkedin.com/in/gsong/"
+          aria-label="Visit my LinkedIn"
+        >
+          <LinkedIn />
+        </SocialLink>
+        <SocialLink
+          href="/articles/rss.xml"
+          aria-label="Subscribe to My RSS Feed"
+        >
+          <Rss />
+        </SocialLink>
+      </div>
+    </footer>
+  </React.Fragment>
+);
 
 const imageSize = 50;
 
