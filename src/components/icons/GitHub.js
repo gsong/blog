@@ -5,8 +5,8 @@ function GitHub(props) {
     <svg
       aria-hidden="true"
       viewBox="0 0 496 512"
-      width="1em"
-      height="1em"
+      height="calc(1em*16/14)"
+      width="calc(1em*16/14)"
       {...props}
     >
       <path
