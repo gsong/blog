@@ -28,7 +28,6 @@ const Layout = ({
         color: "font.body.0",
         display: "flex",
         flexWrap: "wrap",
-        fontSize: "sm",
         justifyContent: "center",
         marginBottom: 4,
         marginTop: 2,
