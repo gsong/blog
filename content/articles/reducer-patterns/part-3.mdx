@@ -8,7 +8,6 @@ keywords:
 ---
 
 import CodeSandbox from "components/CodeSandbox";
-import FormStateChart from "./FormStateChart";
 
 - [Part 1: Introduction to `useReducer` and basic reducer patterns][part-1]
 - [Part 2: Reducers with actions][part-2]
@@ -230,7 +229,7 @@ How would you satisfy all these requirements? Try to capture all the logic
 imperatively? Use one of the many React form libraries? I happen to think [state
 charts][] are a great way to declaratively satisfy all the requirements.
 
-<FormStateChart />
+![State chart describing form states and transitions](form-state-chart.svg)
 
 Our state chart has four states—editing, submitting, resolved, rejected—with
 clear transitions defined among the states, e.g. we transition from `editing` to

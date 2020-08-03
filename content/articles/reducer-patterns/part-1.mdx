@@ -9,9 +9,7 @@ keywords:
 ---
 
 import CodeSandbox from "components/CodeSandbox";
-import DispatchFlow from "./DispatchFlow";
 import Repl from "components/Repl";
-import SetStateFlow from "./SetStateFlow";
 
 I see a lot of people, especially those new to React hooks, shy away from
 [`useReducer`][usereducer] in favor of multiple `useState`s. I think some of it
@@ -30,12 +28,12 @@ to-heading: 2
 The `useState` API has two parts: the state and the state setter. When you want
 to update the state, you replace it using the state setter.
 
-<SetStateFlow />
+![Sequence diagram of React.useState setState flow](setState-flow.svg)
 
 The `useReducer` API has three parts: the state, an action dispatcher, and a
 reducer to produce the new state.
 
-<DispatchFlow />
+![Sequence diagram of React.useReducer dispatch flow](dispatch-flow.svg)
 
 When you want to update the state:
 

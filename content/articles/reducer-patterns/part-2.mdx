@@ -9,7 +9,6 @@ keywords:
 ---
 
 import CodeSandbox from "components/CodeSandbox";
-import DispatchFlow from "./DispatchFlow";
 
 - [Part 1: Introduction to `useReducer` and basic reducer patterns][part-1]
 
@@ -27,7 +26,7 @@ exclude: ['Table of Contents', 'Use Case', 'Solution', 'Intermission']
 
 ## Reducer Using `action`
 
-<DispatchFlow />
+![Sequence diagram of React.useReducer dispatch flow](dispatch-flow.svg)
 
 Remember that `(currentState, action) => newState` is the complete reducer
 signature. In patterns we've explored so far, we haven't used the `action`

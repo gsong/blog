@@ -47,6 +47,10 @@ export const global = (theme) => {
       ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
     },
 
+    p: {
+      "> img": { display: "block", margin: "auto" },
+    },
+
     ".header-link": { paddingLeft: space[2], paddingRight: space[2] },
     ".link-hover": { ":focus,:hover": { color: colors.link } },
 
