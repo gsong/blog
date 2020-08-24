@@ -129,3 +129,5 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
     },
   },
 });
+
+export const header = { marginTop: 4, marginBottom: 7, marginX: 0 };

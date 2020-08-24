@@ -7,7 +7,7 @@ import { jsx } from "theme-ui";
 import HeadShot from "./HeadShot";
 import SEO from "./SEO";
 import { Email, GitHub, Instagram, LinkedIn, Rss, Twitter } from "./icons";
-import { global } from "../styles";
+import { global, header } from "../styles";
 
 const Layout = ({
   children,
@@ -30,7 +30,7 @@ const Layout = ({
         flexWrap: "wrap",
         justifyContent: "center",
         marginBottom: 4,
-        marginTop: 2,
+        marginTop: 7,
       }}
     >
       <Link
@@ -101,7 +101,7 @@ const Layout = ({
 const imageSize = 50;
 
 const Header = () => (
-  <header sx={{ mt: 4, mb: 7, mx: 0 }}>
+  <header sx={header}>
     <h1>
       <Link
         to="/"

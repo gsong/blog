@@ -3,6 +3,7 @@ import { jsx, useThemeUI } from "theme-ui";
 
 import HeadShot from "../../components/HeadShot";
 import Layout from "../../components/Layout";
+import { header } from "../../styles";
 
 const Home = ({ children, ...props }) => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
   const { theme } = useThemeUI();
 
   return (
-    <header sx={{ alignItems: "center", display: "flex", mt: 4, mb: 7, mx: 0 }}>
+    <header sx={{ ...header, alignItems: "center", display: "flex" }}>
       <h1
         sx={{
           fontSize: `clamp(${theme.fontSizes.base}, 6.8vw, ${theme.fontSizes.xl3})`,
