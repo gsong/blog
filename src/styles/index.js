@@ -35,6 +35,13 @@ export const global = (theme) => {
       ":focus,:hover": { textDecoration: "underline" },
     },
 
+    blockquote: {
+      p: {
+        borderLeft: "5px solid lightgray",
+        paddingLeft: `${space[3]}`,
+      },
+    },
+
     button: {
       backgroundColor: colors.button[0],
       border: 0,
@@ -46,6 +53,8 @@ export const global = (theme) => {
       ":active": { boxShadow: shadows.base },
       ":focus,:hover": { backgroundColor: colors.button[1], cursor: "pointer" },
     },
+
+    mark: { color: colors.font.body[1] },
 
     p: {
       "> img": { display: "block", margin: "auto" },
