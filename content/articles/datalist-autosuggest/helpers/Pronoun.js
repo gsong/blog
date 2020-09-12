@@ -8,7 +8,7 @@ const Pronoun = () => {
   const [pronoun, setPronoun] = React.useState("");
 
   return (
-    <main>
+    <>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -30,7 +30,7 @@ const Pronoun = () => {
       </form>
 
       <p>Submitted pronoun: {pronoun}</p>
-    </main>
+    </>
   );
 };
 

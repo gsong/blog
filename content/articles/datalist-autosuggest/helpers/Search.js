@@ -10,7 +10,7 @@ const Search = () => {
   } = useMachine();
 
   return (
-    <main>
+    <>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -47,7 +47,7 @@ const Search = () => {
       </form>
 
       <p>Submitted term: {context.term}</p>
-    </main>
+    </>
   );
 };
 
