@@ -304,6 +304,22 @@ test the utility functions independently. Composition FTW 🙌.
 Can you think of other improvements to this feature? Fork one of the
 CodeSandboxes and see what you come up with.
 
+## Other Use Cases
+
+It occurred to me that this technique can be used in situations where you want
+to normalize data as much as possible, while still allowing the user to freely
+enter anything they like.
+
+<p>
+  <Link to="/articles/workplace-justice-ally/">In a recent article</Link>, I
+  talked about the issue of HR asking for personal pronouns. HR would like the
+  data to be as consistent as possible, but the right thing to do is to allow
+  people to enter whatever they want. Here's a possible implementation that
+  fulfills both requirements:
+</p>
+
+<Pronoun />
+
 ## Takeaways
 
 - For auto suggestions or completions, try the built-in `<datalist>` element
@@ -311,18 +327,6 @@ CodeSandboxes and see what you come up with.
 - You can dynamically generate the datalist options based on events.
 - Abstract out as much logic as possible from your components for composability,
   testability, and agility.
-
-## Other Use Cases
-
-It occurred to me that this technique can be used in situations where you want
-to normalize data as much as possible, while still allowing the user to freely
-enter anything they like. <Link to="/articles/workplace-justice-ally/">In a
-recent article</Link>, I talked about the issue of HR asking for personal
-pronouns. HR would like the data to be as consistent as possible, but the right
-thing to do is to allow people to enter whatever they want. Here's a possible
-implementation that fulfills both requirements:
-
-<Pronoun />
 
 [datalist]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
 [firefox bug]: https://bugzilla.mozilla.org/show_bug.cgi?id=1474137

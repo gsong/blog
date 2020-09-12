@@ -6,7 +6,7 @@ const Search = () => {
   const {
     state,
     context,
-    actions: { updateDraft, clear, submit },
+    actions: { updateDraft, submit },
   } = useMachine();
 
   return (
@@ -26,6 +26,7 @@ const Search = () => {
           list={"recent-terms"}
           value={context.draft}
           onChange={(e) => updateDraft(e.currentTarget.value)}
+          sx={{ marginRight: 2 }}
         />
         <datalist id="recent-terms" key={context.draft}>
           {context.sortedRecentTerms.map((term) => (
@@ -33,20 +34,15 @@ const Search = () => {
           ))}
         </datalist>
 
-        <button
-          type="button"
-          onClick={clear}
-          disabled={state === "submitting" || !context.canClear}
-          sx={button}
-        >
-          Clear
-        </button>
         <button disabled={!context.canSubmit} sx={button}>
-          {state === "submitting" ? "Searching…" : "Search"}
+          Search
         </button>
       </form>
 
-      <p>Submitted term: {context.term}</p>
+      <p>
+        {state === "submitting" ? "Submitting" : "Submitted"} term:{" "}
+        {context.term}
+      </p>
     </>
   );
 };
@@ -68,7 +64,6 @@ const useMachine = () => {
 
   const actions = {
     updateDraft: (payload) => dispatch({ type: "updateDraft", payload }),
-    clear: () => dispatch({ type: "clear" }),
     submit: () => dispatch({ type: "submit" }),
   };
 
@@ -82,7 +77,6 @@ const initState = {
     term: "",
     recentTerms: [],
     sortedRecentTerms: [],
-    canClear: false,
     canSubmit: false,
     hasSubmitted: false,
   },
@@ -116,24 +110,14 @@ const reducer = (data, { type, payload }) => {
               ...context,
               draft: payload,
               sortedRecentTerms: sortRecentTerms(context.recentTerms, payload),
-              canClear: payload !== "",
               canSubmit:
-                payload !== "" &&
+                payload.trim() !== "" &&
                 trimLower(payload) !== trimLower(context.term),
             },
           };
-        case "clear":
-          return {
-            state,
-            context: {
-              ...context,
-              draft: "",
-              sortedRecentTerms: context.recentTerms,
-              canClear: false,
-              canSubmit: false,
-            },
-          };
         case "submit":
+          if (context.draft.trim() === "") return data;
+
           return {
             state: "submitting",
             context: {
@@ -199,6 +183,10 @@ const isSafari =
   typeof navigator !== "undefined" &&
   navigator.vendor === "Apple Computer, Inc.";
 
-export const button = { marginLeft: 2, paddingX: 3, paddingY: 1 };
+export const button = {
+  paddingX: 3,
+  paddingY: 1,
+  ":disabled": { backgroundColor: "gray.0" },
+};
 
 export default Search;

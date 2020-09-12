@@ -18,8 +18,12 @@ const Pronoun = () => {
         <label htmlFor="pronoun" sx={{ marginRight: 1 }}>
           Personal pronoun
         </label>
-        <input list="presets" id="pronoun" name="pronoun" />
-
+        <input
+          list="presets"
+          id="pronoun"
+          name="pronoun"
+          sx={{ marginRight: 2 }}
+        />
         <datalist id="presets">
           <option value="they/them" />
           <option value="she/her" />
