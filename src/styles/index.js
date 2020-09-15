@@ -72,6 +72,7 @@ const prismStyles = ({ colors, fontSizes, radii, shadows }) => ({
     '&[class*="language-"]': {
       fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Andale Mono", "Ubuntu Mono", "Courier New", monospace;`,
       fontSize: `clamp(${fontSizes.xs}, 2vw, ${fontSizes.sm})`,
+      fontVariantLigatures: "none",
     },
   },
 
