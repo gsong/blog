@@ -186,7 +186,7 @@ const isSafari =
 export const button = {
   paddingX: 3,
   paddingY: 1,
-  ":disabled": { backgroundColor: "gray.0" },
+  ":disabled": { backgroundColor: "gray.0", cursor: "unset" },
 };
 
 export default Search;
