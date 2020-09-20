@@ -1,7 +1,8 @@
 ---
-title: Using the HTML Data List Element for Simple Autosuggest
-description: For simple autosuggest needs, give HTML a chance.
+title: Using the HTML Data List Element for Simple Combo Boxes
+description: For simple combo box needs, give HTML a chance.
 published: 2020-09-12T12:09:37-07:00
+updated: 2020-09-20T05:03:27-07:00
 keywords:
   - html
   - javascript
@@ -304,6 +305,18 @@ test the utility functions independently. Composition FTW 🙌.
 Can you think of other improvements to this feature? Fork one of the
 CodeSandboxes and see what you come up with.
 
+## Accessibility
+
+[There are potentially some accessibility issues][a11y] that may prevent you
+from using this technique, specifically screen readers do not convey data list
+changes. This may be acceptable in the case of auto suggest, since the user is
+free to enter whatever they like—the auto suggest feature is a nice-to-have.
+
+For a React-specific alternative, [check out Reach UI's
+Combobox][reach-ui-combobox]. Also [read 24 Accessibility's "&lt;select&gt; Your
+Poision"][select-your-poision] article for in-depth discussion of why this is a
+hard-to-solve problem.
+
 ## Other Use Cases
 
 It occurred to me that this technique can be used in situations where you want
@@ -322,12 +335,14 @@ enter anything they like.
 
 ## Takeaways
 
-- For auto suggestions or completions, try the built-in `<datalist>` element
-  first.
+- For combo boxes, try the built-in `<datalist>` element first.
 - You can dynamically generate the datalist options based on events.
 - Abstract out as much logic as possible from your components for composability,
   testability, and agility.
 
+[a11y]: https://a11ysupport.io/tech/html/datalist_element
 [datalist]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
 [firefox bug]: https://bugzilla.mozilla.org/show_bug.cgi?id=1474137
 [peter]: https://www.peterbe.com/plog/datalist-looks-great-on-mobile-devices
+[reach-ui-combobox]: https://reach.tech/combobox/
+[select-your-poision]: https://www.24a11y.com/2019/select-your-poison/
