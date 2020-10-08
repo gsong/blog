@@ -131,7 +131,17 @@ const Header = () => (
 );
 
 const SocialLink = ({ children, ...props }) => (
-  <a {...props} sx={{ color: "font.body.0" }} className="link-hover">
+  <a
+    {...props}
+    sx={{
+      color: "font.body.0",
+      transition: "all .2s ease-in-out",
+      ":focus,:hover": {
+        transform: "scale(1.25)",
+      },
+    }}
+    className="link-hover"
+  >
     <div
       sx={{
         display: "flex",
