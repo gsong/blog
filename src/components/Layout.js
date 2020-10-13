@@ -135,9 +135,11 @@ const SocialLink = ({ children, ...props }) => (
     {...props}
     sx={{
       color: "font.body.0",
-      transition: "all .2s ease-in-out",
+      transition: "transform .2s ease-in-out",
       ":focus,:hover": {
-        transform: "scale(1.25)",
+        "@media (prefers-reduced-motion: no-preference)": {
+          transform: "scale(1.25)",
+        },
       },
     }}
     className="link-hover"
