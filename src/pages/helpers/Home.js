@@ -23,6 +23,7 @@ const Header = () => {
           fontSize: `clamp(${theme.fontSizes.base}, 6.8vw, ${theme.fontSizes.xl3})`,
           fontWeight: 700,
           hyphens: "auto",
+          letterSpacing: "-0.025em",
           margin: `0 0 0 ${theme.space[3]}`,
           order: 1,
 
