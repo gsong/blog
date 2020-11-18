@@ -32,7 +32,7 @@ export const global = (theme) => {
       color: colors.link,
       textDecoration: "none",
 
-      ":focus,:hover": { textDecoration: "underline" },
+      ":focus,:hover": { color: colors.link, textDecoration: "underline" },
     },
 
     blockquote: {
@@ -61,7 +61,6 @@ export const global = (theme) => {
     },
 
     ".header-link": { paddingLeft: space[2], paddingRight: space[2] },
-    ".link-hover": { ":focus,:hover": { color: colors.link } },
 
     ...prismStyles(theme),
   };

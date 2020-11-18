@@ -36,7 +36,6 @@ const Layout = ({
       <Link
         to="/"
         sx={{ color: "font.body.0", py: 3 }}
-        className="link-hover"
         aria-label="Return to homepage"
       >
         George Song &copy; {new Date().getFullYear()}
@@ -114,7 +113,6 @@ const Header = () => (
           // stylelint-disable-next-line
           ":focus,:hover": { textDecoration: "none" },
         }}
-        className="link-hover"
         aria-label="Return to homepage"
       >
         <HeadShot
@@ -142,7 +140,6 @@ const SocialLink = ({ children, ...props }) => (
         },
       },
     }}
-    className="link-hover"
   >
     <div
       sx={{

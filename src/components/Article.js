@@ -19,7 +19,6 @@ const Article = ({ children, ...props }) => {
           <a
             href={`https://github.com/gsong/personal-site/commits/main${srcPath}`}
             sx={link}
-            className="link-hover"
             aria-label={a11yDate}
           >
             {displayDate}
