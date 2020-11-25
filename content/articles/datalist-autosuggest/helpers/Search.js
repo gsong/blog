@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react";
+import randomWords from "random-words";
 import { jsx } from "theme-ui";
 
 const Search = () => {
@@ -51,9 +52,7 @@ const useMachine = () => {
   const [{ state, context }, dispatch] = React.useReducer(reducer, initState);
 
   React.useEffect(() => {
-    fetch("https://random-word-api.herokuapp.com/word?number=100&swear=0")
-      .then((response) => response.json())
-      .then((payload) => dispatch({ type: "initialize", payload }));
+    dispatch({ type: "initialize", payload: [...new Set(randomWords(100))] });
   }, []);
 
   React.useEffect(() => {
