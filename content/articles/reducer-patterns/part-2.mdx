@@ -2,7 +2,7 @@
 title: React.useReducer Reducer Patterns, Part 2
 description: There's more than one way to write reducers, part 2.
 published: 2020-07-25T18:53:56-07:00
-updated: 2020-07-28T12:32:06-07:00
+updated: 2021-04-01T21:34:12-07:00
 keywords:
   - javascript
   - react
@@ -200,7 +200,7 @@ return (
 
 Wait, say what? 🤔
 
-```js{1-4,8,21,28}
+```js{1-4,8,21,27}
 const reducer = (count, action) => action(count);
 const [count, dispatch] = React.useReducer(reducer, 0);
 const add = (value) => dispatch((count) => count + value);
@@ -211,9 +211,9 @@ return (
     <div>Count: {count}</div>
     <form>
       <label>
-        Add to count:{" "}
+        Change count by:{" "}
         <input
-          name="numberToAdd"
+          name="modifier"
           type="number"
           defaultValue={1}
           style={{ width: "4em" }}
@@ -221,15 +221,13 @@ return (
       </label>
       <button
         type="button"
-        onClick={(e) => add(Number(e.currentTarget.form.numberToAdd.value))}
+        onClick={(e) => add(Number(e.currentTarget.form.modifier.value))}
       >
         Add
       </button>
       <button
         type="button"
-        onClick={(e) =>
-          subtract(Number(e.currentTarget.form.numberToAdd.value))
-        }
+        onClick={(e) => subtract(Number(e.currentTarget.form.modifier.value))}
       >
         Subtract
       </button>
